@@ -1,0 +1,16 @@
+source,entity,rule,failed_rows,passed
+erp,orders,order_id_not_null,0,True
+erp,orders,order_id_unique,0,True
+erp,orders,gross_amount_non_negative,0,True
+erp,order_items,order_item_id_not_null,0,True
+erp,order_items,order_item_id_unique,0,True
+erp,order_items,quantity_non_negative,0,True
+erp,order_items,unit_price_non_negative,0,True
+erp,products,product_id_not_null,0,True
+erp,products,product_id_unique,0,True
+crm,users,user_id_not_null,0,True
+crm,users,user_id_unique,0,True
+web,sessions,session_id_not_null,0,True
+web,sessions,session_id_unique,0,True
+web,clickstream_events,event_id_not_null,0,True
+web,clickstream_events,event_id_unique,0,True
