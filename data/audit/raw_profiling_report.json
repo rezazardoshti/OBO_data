@@ -1,0 +1,5632 @@
+[
+  {
+    "entity": "application_logs",
+    "file_path": "data\\raw\\source=app\\entity=application_logs\\ingest_date=2026-04-20\\app.log",
+    "row_count": 240,
+    "column_count": 1,
+    "columns": [
+      "raw_log_line"
+    ],
+    "null_counts": {
+      "raw_log_line": 0
+    },
+    "dtypes": {
+      "raw_log_line": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "raw_log_line": "2026-03-22 13:53:20 | INFO | session expired"
+      },
+      {
+        "raw_log_line": "2026-04-10 01:39:12 | INFO | product service timeout"
+      },
+      {
+        "raw_log_line": "2026-03-02 01:07:40 | INFO | payment callback received"
+      },
+      {
+        "raw_log_line": "2026-04-18 00:08:16 | INFO | feature pipeline started"
+      },
+      {
+        "raw_log_line": "2026-03-11 16:52:21 | INFO | payment callback received"
+      }
+    ],
+    "file_format": "log"
+  },
+  {
+    "entity": "users",
+    "file_path": "data\\raw\\source=crm\\entity=users\\ingest_date=2026-04-20\\users.csv",
+    "row_count": 300,
+    "column_count": 8,
+    "columns": [
+      "user_id",
+      "signup_ts",
+      "city",
+      "country",
+      "age",
+      "gender",
+      "is_premium",
+      "marketing_opt_in"
+    ],
+    "null_counts": {
+      "user_id": 0,
+      "signup_ts": 0,
+      "city": 0,
+      "country": 0,
+      "age": 0,
+      "gender": 0,
+      "is_premium": 0,
+      "marketing_opt_in": 0
+    },
+    "dtypes": {
+      "user_id": "int64",
+      "signup_ts": "object",
+      "city": "object",
+      "country": "object",
+      "age": "int64",
+      "gender": "object",
+      "is_premium": "bool",
+      "marketing_opt_in": "bool"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "user_id": 1,
+        "signup_ts": "2025-05-18 01:21:37",
+        "city": "München",
+        "country": "AT",
+        "age": 51,
+        "gender": "x",
+        "is_premium": true,
+        "marketing_opt_in": false
+      },
+      {
+        "user_id": 2,
+        "signup_ts": "2024-05-26 05:25:20",
+        "city": "Stuttgart",
+        "country": "CH",
+        "age": 30,
+        "gender": "m",
+        "is_premium": false,
+        "marketing_opt_in": true
+      },
+      {
+        "user_id": 3,
+        "signup_ts": "2024-05-13 12:20:42",
+        "city": "Leipzig",
+        "country": "AT",
+        "age": 35,
+        "gender": "m",
+        "is_premium": true,
+        "marketing_opt_in": false
+      },
+      {
+        "user_id": 4,
+        "signup_ts": "2024-04-01 19:47:57",
+        "city": "Zürich",
+        "country": "DE",
+        "age": 39,
+        "gender": "m",
+        "is_premium": false,
+        "marketing_opt_in": false
+      },
+      {
+        "user_id": 5,
+        "signup_ts": "2024-04-06 02:23:03",
+        "city": "Zürich",
+        "country": "CH",
+        "age": 27,
+        "gender": "f",
+        "is_premium": true,
+        "marketing_opt_in": true
+      }
+    ],
+    "file_format": "csv"
+  },
+  {
+    "entity": "inventory_snapshots",
+    "file_path": "data\\raw\\source=erp\\entity=inventory_snapshots\\ingest_date=2026-04-20\\inventory_snapshots.csv",
+    "row_count": 1152,
+    "column_count": 5,
+    "columns": [
+      "snapshot_date",
+      "product_id",
+      "warehouse_id",
+      "stock_qty",
+      "reserved_qty"
+    ],
+    "null_counts": {
+      "snapshot_date": 0,
+      "product_id": 0,
+      "warehouse_id": 0,
+      "stock_qty": 0,
+      "reserved_qty": 0
+    },
+    "dtypes": {
+      "snapshot_date": "object",
+      "product_id": "int64",
+      "warehouse_id": "object",
+      "stock_qty": "int64",
+      "reserved_qty": "int64"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "snapshot_date": "2026-03-01",
+        "product_id": 1,
+        "warehouse_id": "WH-HAM",
+        "stock_qty": 61,
+        "reserved_qty": 5
+      },
+      {
+        "snapshot_date": "2026-03-01",
+        "product_id": 2,
+        "warehouse_id": "WH-BER",
+        "stock_qty": 23,
+        "reserved_qty": 6
+      },
+      {
+        "snapshot_date": "2026-03-01",
+        "product_id": 3,
+        "warehouse_id": "WH-HAM",
+        "stock_qty": 73,
+        "reserved_qty": 5
+      },
+      {
+        "snapshot_date": "2026-03-01",
+        "product_id": 4,
+        "warehouse_id": "WH-MUC",
+        "stock_qty": 53,
+        "reserved_qty": 10
+      },
+      {
+        "snapshot_date": "2026-03-01",
+        "product_id": 5,
+        "warehouse_id": "WH-HAM",
+        "stock_qty": 30,
+        "reserved_qty": 1
+      }
+    ],
+    "file_format": "csv"
+  },
+  {
+    "entity": "order_items",
+    "file_path": "data\\raw\\source=erp\\entity=order_items\\ingest_date=2026-04-20\\order_items.csv",
+    "row_count": 1224,
+    "column_count": 7,
+    "columns": [
+      "order_item_id",
+      "order_id",
+      "product_id",
+      "quantity",
+      "unit_price",
+      "discount_pct",
+      "line_total"
+    ],
+    "null_counts": {
+      "order_item_id": 0,
+      "order_id": 0,
+      "product_id": 0,
+      "quantity": 0,
+      "unit_price": 0,
+      "discount_pct": 0,
+      "line_total": 0
+    },
+    "dtypes": {
+      "order_item_id": "int64",
+      "order_id": "int64",
+      "product_id": "int64",
+      "quantity": "int64",
+      "unit_price": "float64",
+      "discount_pct": "float64",
+      "line_total": "float64"
+    },
+    "duplicate_row_count": 1,
+    "sample_rows": [
+      {
+        "order_item_id": 1,
+        "order_id": 10001,
+        "product_id": 60,
+        "quantity": 2,
+        "unit_price": 333.45,
+        "discount_pct": 0.05,
+        "line_total": 666.9
+      },
+      {
+        "order_item_id": 2,
+        "order_id": 10001,
+        "product_id": 30,
+        "quantity": 1,
+        "unit_price": 433.0,
+        "discount_pct": 0.0,
+        "line_total": 433.0
+      },
+      {
+        "order_item_id": 3,
+        "order_id": 10002,
+        "product_id": 87,
+        "quantity": 1,
+        "unit_price": 51.0,
+        "discount_pct": 0.0,
+        "line_total": 51.0
+      },
+      {
+        "order_item_id": 4,
+        "order_id": 10002,
+        "product_id": 35,
+        "quantity": 1,
+        "unit_price": 409.0,
+        "discount_pct": 0.0,
+        "line_total": 409.0
+      },
+      {
+        "order_item_id": 5,
+        "order_id": 10002,
+        "product_id": 55,
+        "quantity": 1,
+        "unit_price": 114.0,
+        "discount_pct": 0.0,
+        "line_total": 114.0
+      }
+    ],
+    "file_format": "csv"
+  },
+  {
+    "entity": "orders",
+    "file_path": "data\\raw\\source=erp\\entity=orders\\ingest_date=2026-04-20\\orders.csv",
+    "row_count": 705,
+    "column_count": 10,
+    "columns": [
+      "order_id",
+      "order_ts",
+      "user_id",
+      "session_id",
+      "payment_method",
+      "status",
+      "shipping_city",
+      "shipping_country",
+      "gross_amount",
+      "traffic_source"
+    ],
+    "null_counts": {
+      "order_id": 0,
+      "order_ts": 0,
+      "user_id": 0,
+      "session_id": 0,
+      "payment_method": 0,
+      "status": 0,
+      "shipping_city": 0,
+      "shipping_country": 0,
+      "gross_amount": 1,
+      "traffic_source": 0
+    },
+    "dtypes": {
+      "order_id": "int64",
+      "order_ts": "object",
+      "user_id": "int64",
+      "session_id": "object",
+      "payment_method": "object",
+      "status": "object",
+      "shipping_city": "object",
+      "shipping_country": "object",
+      "gross_amount": "float64",
+      "traffic_source": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "order_id": 10585,
+        "order_ts": "2026-03-01 04:24:17",
+        "user_id": 251,
+        "session_id": "s_251_10_6991",
+        "payment_method": "paypal",
+        "status": "completed",
+        "shipping_city": "Wien",
+        "shipping_country": "CH",
+        "gross_amount": 1957.0,
+        "traffic_source": "newsletter"
+      },
+      {
+        "order_id": 10416,
+        "order_ts": "2026-03-01 05:41:23",
+        "user_id": 171,
+        "session_id": "s_171_6_8913",
+        "payment_method": "klarna",
+        "status": "returned",
+        "shipping_city": "Wien",
+        "shipping_country": "AT",
+        "gross_amount": 208.0,
+        "traffic_source": "instagram"
+      },
+      {
+        "order_id": 10083,
+        "order_ts": "2026-03-01 06:04:12",
+        "user_id": 36,
+        "session_id": "s_36_3_1915",
+        "payment_method": "PayPal",
+        "status": "completed",
+        "shipping_city": "Zürich",
+        "shipping_country": "CH",
+        "gross_amount": 1927.0,
+        "traffic_source": "linkedin"
+      },
+      {
+        "order_id": 10615,
+        "order_ts": "2026-03-01 06:23:46",
+        "user_id": 263,
+        "session_id": "s_263_11_3870",
+        "payment_method": "apple_pay",
+        "status": "completed",
+        "shipping_city": "Dresden",
+        "shipping_country": "AT",
+        "gross_amount": 184.5,
+        "traffic_source": "linkedin"
+      },
+      {
+        "order_id": 10620,
+        "order_ts": "2026-03-01 08:35:39",
+        "user_id": 266,
+        "session_id": "s_266_0_2107",
+        "payment_method": "invoice",
+        "status": "completed",
+        "shipping_city": "Dresden",
+        "shipping_country": "CH",
+        "gross_amount": 234.0,
+        "traffic_source": "instagram"
+      }
+    ],
+    "file_format": "csv"
+  },
+  {
+    "entity": "products",
+    "file_path": "data\\raw\\source=erp\\entity=products\\ingest_date=2026-04-20\\products.csv",
+    "row_count": 144,
+    "column_count": 7,
+    "columns": [
+      "product_id",
+      "sku",
+      "product_name",
+      "category",
+      "brand",
+      "base_price",
+      "active"
+    ],
+    "null_counts": {
+      "product_id": 0,
+      "sku": 0,
+      "product_name": 1,
+      "category": 0,
+      "brand": 0,
+      "base_price": 0,
+      "active": 0
+    },
+    "dtypes": {
+      "product_id": "int64",
+      "sku": "object",
+      "product_name": "object",
+      "category": "object",
+      "brand": "object",
+      "base_price": "float64",
+      "active": "bool"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "product_id": 1,
+        "sku": "SKU-00001",
+        "product_name": "ByteCore Business 14",
+        "category": "Laptop",
+        "brand": "SkyLoop",
+        "base_price": 2300.0,
+        "active": true
+      },
+      {
+        "product_id": 2,
+        "sku": "SKU-00002",
+        "product_name": "Auralink Creator 16",
+        "category": "Laptop",
+        "brand": "SkyLoop",
+        "base_price": 2266.0,
+        "active": true
+      },
+      {
+        "product_id": 3,
+        "sku": "SKU-00003",
+        "product_name": "NovaTech Business 14",
+        "category": "Laptop",
+        "brand": "ByteCore",
+        "base_price": 2198.0,
+        "active": true
+      },
+      {
+        "product_id": 4,
+        "sku": "SKU-00004",
+        "product_name": "SkyLoop Creator 16",
+        "category": "Laptop",
+        "brand": "PeakWare",
+        "base_price": 1103.0,
+        "active": true
+      },
+      {
+        "product_id": 5,
+        "sku": "SKU-00005",
+        "product_name": "SkyLoop Ultrabook 13",
+        "category": "Laptop",
+        "brand": "PeakWare ",
+        "base_price": 2440.0,
+        "active": false
+      }
+    ],
+    "file_format": "csv"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-01\\clickstream_2026-03-01.jsonl",
+    "row_count": 615,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 1,
+      "traffic_source": 0,
+      "page": 1
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 2,
+    "sample_rows": [
+      {
+        "event_id": "e_215_4_0_80026",
+        "event_ts": "2026-03-01 00:15:20",
+        "session_id": "s_215_4_3054",
+        "user_id": 215,
+        "event_type": "product_view",
+        "product_id": 36,
+        "device_type": "tablet",
+        "traffic_source": "linkedin",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_215_4_1_39952",
+        "event_ts": "2026-03-01 00:17:29",
+        "session_id": "s_215_4_3054",
+        "user_id": 215,
+        "event_type": "product_view",
+        "product_id": 36,
+        "device_type": "tablet",
+        "traffic_source": "linkedin",
+        "page": "product"
+      },
+      {
+        "event_id": "e_215_4_2_88129",
+        "event_ts": "2026-03-01 00:22:04",
+        "session_id": "s_215_4_3054",
+        "user_id": 215,
+        "event_type": "remove_from_cart",
+        "product_id": 36,
+        "device_type": "tablet",
+        "traffic_source": "linkedin",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_138_7_0_31587",
+        "event_ts": "2026-03-01 00:36:59",
+        "session_id": "s_138_7_7596",
+        "user_id": 138,
+        "event_type": "product_view",
+        "product_id": 24,
+        "device_type": null,
+        "traffic_source": "affiliate",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_138_7_1_19514",
+        "event_ts": "2026-03-01 00:42:20",
+        "session_id": "s_138_7_7596",
+        "user_id": 138,
+        "event_type": "remove_from_cart",
+        "product_id": 124,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "home"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-02\\clickstream_2026-03-02.jsonl",
+    "row_count": 618,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_215_5_0_47211",
+        "event_ts": "2026-03-02 00:51:00",
+        "session_id": "s_215_5_6265",
+        "user_id": 215,
+        "event_type": "page_view",
+        "product_id": 9,
+        "device_type": "mobile",
+        "traffic_source": "direct",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_215_5_1_87854",
+        "event_ts": "2026-03-02 00:51:27",
+        "session_id": "s_215_5_6265",
+        "user_id": 215,
+        "event_type": "product_view",
+        "product_id": 9,
+        "device_type": "mobile",
+        "traffic_source": "direct",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_188_2_0_96106",
+        "event_ts": "2026-03-02 00:51:53",
+        "session_id": "s_188_2_1630",
+        "user_id": 188,
+        "event_type": "product_view",
+        "product_id": 90,
+        "device_type": "tablet",
+        "traffic_source": "affiliate",
+        "page": "product"
+      },
+      {
+        "event_id": "e_215_5_2_73598",
+        "event_ts": "2026-03-02 00:53:56",
+        "session_id": "s_215_5_6265",
+        "user_id": 215,
+        "event_type": "page_view",
+        "product_id": 9,
+        "device_type": "mobile",
+        "traffic_source": "direct",
+        "page": "product"
+      },
+      {
+        "event_id": "e_188_2_1_20832",
+        "event_ts": "2026-03-02 00:57:21",
+        "session_id": "s_188_2_1630",
+        "user_id": 188,
+        "event_type": "page_view",
+        "product_id": 120,
+        "device_type": "tablet",
+        "traffic_source": "affiliate",
+        "page": "search"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-03\\clickstream_2026-03-03.jsonl",
+    "row_count": 578,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_138_6_0_78415",
+        "event_ts": "2026-03-03 00:11:26",
+        "session_id": "s_138_6_8129",
+        "user_id": 138,
+        "event_type": "page_view",
+        "product_id": 45,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "home"
+      },
+      {
+        "event_id": "e_138_6_1_38540",
+        "event_ts": "2026-03-03 00:16:01",
+        "session_id": "s_138_6_8129",
+        "user_id": 138,
+        "event_type": "product_view",
+        "product_id": 45,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "product"
+      },
+      {
+        "event_id": "e_138_6_2_19040",
+        "event_ts": "2026-03-03 00:18:37",
+        "session_id": "s_138_6_8129",
+        "user_id": 138,
+        "event_type": "product_view",
+        "product_id": 45,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_138_6_3_99446",
+        "event_ts": "2026-03-03 00:24:04",
+        "session_id": "s_138_6_8129",
+        "user_id": 138,
+        "event_type": "add_to_cart",
+        "product_id": 45,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_138_6_4_56810",
+        "event_ts": "2026-03-03 00:25:03",
+        "session_id": "s_138_6_8129",
+        "user_id": 138,
+        "event_type": "remove_from_cart",
+        "product_id": 45,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "checkout"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-04\\clickstream_2026-03-04.jsonl",
+    "row_count": 521,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_208_2_0_44529",
+        "event_ts": "2026-03-04 01:34:59",
+        "session_id": "s_208_2_8861",
+        "user_id": 208,
+        "event_type": "product_view",
+        "product_id": 97,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_208_2_1_49779",
+        "event_ts": "2026-03-04 01:36:42",
+        "session_id": "s_208_2_8861",
+        "user_id": 208,
+        "event_type": "product_view",
+        "product_id": 97,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "product"
+      },
+      {
+        "event_id": "e_208_2_2_34197",
+        "event_ts": "2026-03-04 01:39:44",
+        "session_id": "s_208_2_8861",
+        "user_id": 208,
+        "event_type": "add_to_cart",
+        "product_id": 97,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_208_2_3_34651",
+        "event_ts": "2026-03-04 01:42:29",
+        "session_id": "s_208_2_8861",
+        "user_id": 208,
+        "event_type": "add_to_cart",
+        "product_id": 97,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_208_2_4_42669",
+        "event_ts": "2026-03-04 01:48:19",
+        "session_id": "s_208_2_8861",
+        "user_id": 208,
+        "event_type": "add_to_cart",
+        "product_id": 97,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "search"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-05\\clickstream_2026-03-05.jsonl",
+    "row_count": 491,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_162_7_0_34596",
+        "event_ts": "2026-03-05 00:02:50",
+        "session_id": "s_162_7_1634",
+        "user_id": 162,
+        "event_type": "page_view",
+        "product_id": 37,
+        "device_type": "mobile",
+        "traffic_source": "linkedin",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_113_8_7_89581",
+        "event_ts": "2026-03-05 00:05:06",
+        "session_id": "s_113_8_9654",
+        "user_id": 113,
+        "event_type": "product_view",
+        "product_id": 54,
+        "device_type": "tablet",
+        "traffic_source": "linkedin",
+        "page": "product"
+      },
+      {
+        "event_id": "e_162_7_1_60817",
+        "event_ts": "2026-03-05 00:08:31",
+        "session_id": "s_162_7_1634",
+        "user_id": 162,
+        "event_type": "product_view",
+        "product_id": 37,
+        "device_type": "mobile",
+        "traffic_source": "linkedin",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_162_7_2_45031",
+        "event_ts": "2026-03-05 00:09:13",
+        "session_id": "s_162_7_1634",
+        "user_id": 162,
+        "event_type": "add_to_cart",
+        "product_id": 37,
+        "device_type": "mobile",
+        "traffic_source": "linkedin",
+        "page": "search"
+      },
+      {
+        "event_id": "e_207_8_0_75090",
+        "event_ts": "2026-03-05 00:15:18",
+        "session_id": "s_207_8_5565",
+        "user_id": 207,
+        "event_type": "product_view",
+        "product_id": 117,
+        "device_type": "desktop",
+        "traffic_source": "affiliate",
+        "page": "home"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-06\\clickstream_2026-03-06.jsonl",
+    "row_count": 611,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_79_11_0_86223",
+        "event_ts": "2026-03-06 00:44:32",
+        "session_id": "s_79_11_6644",
+        "user_id": 79,
+        "event_type": "product_view",
+        "product_id": 55,
+        "device_type": "mobile",
+        "traffic_source": "instagram",
+        "page": "product"
+      },
+      {
+        "event_id": "e_79_11_1_23485",
+        "event_ts": "2026-03-06 00:48:10",
+        "session_id": "s_79_11_6644",
+        "user_id": 79,
+        "event_type": "product_view",
+        "product_id": 52,
+        "device_type": "mobile",
+        "traffic_source": "instagram",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_79_11_2_25713",
+        "event_ts": "2026-03-06 00:52:19",
+        "session_id": "s_79_11_6644",
+        "user_id": 79,
+        "event_type": "add_to_cart",
+        "product_id": 52,
+        "device_type": "mobile",
+        "traffic_source": "instagram",
+        "page": "product"
+      },
+      {
+        "event_id": "e_79_11_3_57119",
+        "event_ts": "2026-03-06 00:56:27",
+        "session_id": "s_79_11_6644",
+        "user_id": 79,
+        "event_type": "page_view",
+        "product_id": 52,
+        "device_type": "mobile",
+        "traffic_source": "instagram",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_79_11_4_38500",
+        "event_ts": "2026-03-06 01:00:05",
+        "session_id": "s_79_11_6644",
+        "user_id": 79,
+        "event_type": "product_view",
+        "product_id": 55,
+        "device_type": "mobile",
+        "traffic_source": "instagram",
+        "page": "checkout"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-07\\clickstream_2026-03-07.jsonl",
+    "row_count": 487,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_55_1_0_54890",
+        "event_ts": "2026-03-07 00:08:52",
+        "session_id": "s_55_1_1558",
+        "user_id": 55,
+        "event_type": "add_to_cart",
+        "product_id": 139,
+        "device_type": "tablet",
+        "traffic_source": "affiliate",
+        "page": "home"
+      },
+      {
+        "event_id": "e_55_1_1_64653",
+        "event_ts": "2026-03-07 00:12:56",
+        "session_id": "s_55_1_1558",
+        "user_id": 55,
+        "event_type": "product_view",
+        "product_id": 139,
+        "device_type": "tablet",
+        "traffic_source": "affiliate",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_90_7_0_41758",
+        "event_ts": "2026-03-07 00:14:50",
+        "session_id": "s_90_7_3538",
+        "user_id": 90,
+        "event_type": "product_view",
+        "product_id": 100,
+        "device_type": "mobile",
+        "traffic_source": "instagram",
+        "page": "product"
+      },
+      {
+        "event_id": "e_55_1_2_20822",
+        "event_ts": "2026-03-07 00:17:50",
+        "session_id": "s_55_1_1558",
+        "user_id": 55,
+        "event_type": "add_to_cart",
+        "product_id": 41,
+        "device_type": "tablet",
+        "traffic_source": "affiliate",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_90_7_1_44635",
+        "event_ts": "2026-03-07 00:19:23",
+        "session_id": "s_90_7_3538",
+        "user_id": 90,
+        "event_type": "page_view",
+        "product_id": 5,
+        "device_type": "mobile",
+        "traffic_source": "instagram",
+        "page": "home"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-08\\clickstream_2026-03-08.jsonl",
+    "row_count": 495,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_233_8_0_21319",
+        "event_ts": "2026-03-08 00:00:31",
+        "session_id": "s_233_8_4250",
+        "user_id": 233,
+        "event_type": "add_to_cart",
+        "product_id": 13,
+        "device_type": "tablet",
+        "traffic_source": "affiliate",
+        "page": "search"
+      },
+      {
+        "event_id": "e_233_8_1_21208",
+        "event_ts": "2026-03-08 00:00:41",
+        "session_id": "s_233_8_4250",
+        "user_id": 233,
+        "event_type": "add_to_cart",
+        "product_id": 13,
+        "device_type": "tablet",
+        "traffic_source": "affiliate",
+        "page": "product"
+      },
+      {
+        "event_id": "e_8_5_0_15644",
+        "event_ts": "2026-03-08 00:02:40",
+        "session_id": "s_8_5_4623",
+        "user_id": 8,
+        "event_type": "product_view",
+        "product_id": 112,
+        "device_type": "tablet",
+        "traffic_source": "linkedin",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_233_8_2_98086",
+        "event_ts": "2026-03-08 00:03:45",
+        "session_id": "s_233_8_4250",
+        "user_id": 233,
+        "event_type": "checkout_start",
+        "product_id": 13,
+        "device_type": "tablet",
+        "traffic_source": "affiliate",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_187_5_8_73013",
+        "event_ts": "2026-03-08 00:03:53",
+        "session_id": "s_187_5_1932",
+        "user_id": 187,
+        "event_type": "add_to_cart",
+        "product_id": 46,
+        "device_type": "tablet",
+        "traffic_source": "instagram",
+        "page": "cart"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-09\\clickstream_2026-03-09.jsonl",
+    "row_count": 525,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_37_1_0_85527",
+        "event_ts": "2026-03-09 00:00:29",
+        "session_id": "s_37_1_2740",
+        "user_id": 37,
+        "event_type": "checkout_start",
+        "product_id": 105,
+        "device_type": "desktop",
+        "traffic_source": "newsletter",
+        "page": "search"
+      },
+      {
+        "event_id": "e_230_9_7_46655",
+        "event_ts": "2026-03-09 00:00:35",
+        "session_id": "s_230_9_1296",
+        "user_id": 230,
+        "event_type": "product_view",
+        "product_id": 57,
+        "device_type": "tablet",
+        "traffic_source": "instagram",
+        "page": "home"
+      },
+      {
+        "event_id": "e_145_6_1_63248",
+        "event_ts": "2026-03-09 00:02:26",
+        "session_id": "s_145_6_4296",
+        "user_id": 145,
+        "event_type": "checkout_start",
+        "product_id": 132,
+        "device_type": "tablet",
+        "traffic_source": "direct",
+        "page": "home"
+      },
+      {
+        "event_id": "e_178_8_2_45923",
+        "event_ts": "2026-03-09 00:04:08",
+        "session_id": "s_178_8_6846",
+        "user_id": 178,
+        "event_type": "product_view",
+        "product_id": 30,
+        "device_type": "desktop",
+        "traffic_source": "instagram",
+        "page": "product"
+      },
+      {
+        "event_id": "e_37_1_1_90464",
+        "event_ts": "2026-03-09 00:04:32",
+        "session_id": "s_37_1_2740",
+        "user_id": 37,
+        "event_type": "add_to_cart",
+        "product_id": 119,
+        "device_type": "desktop",
+        "traffic_source": "newsletter",
+        "page": "cart"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-10\\clickstream_2026-03-10.jsonl",
+    "row_count": 542,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_197_5_4_17964",
+        "event_ts": "2026-03-10 00:02:29",
+        "session_id": "s_197_5_6852",
+        "user_id": 197,
+        "event_type": "page_view",
+        "product_id": 117,
+        "device_type": "mobile",
+        "traffic_source": "linkedin",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_197_5_5_87165",
+        "event_ts": "2026-03-10 00:04:14",
+        "session_id": "s_197_5_6852",
+        "user_id": 197,
+        "event_type": "product_view",
+        "product_id": 117,
+        "device_type": "mobile",
+        "traffic_source": "linkedin",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_197_5_6_92605",
+        "event_ts": "2026-03-10 00:07:02",
+        "session_id": "s_197_5_6852",
+        "user_id": 197,
+        "event_type": "page_view",
+        "product_id": 117,
+        "device_type": "mobile",
+        "traffic_source": "linkedin",
+        "page": "search"
+      },
+      {
+        "event_id": "e_201_10_0_71533",
+        "event_ts": "2026-03-10 00:11:40",
+        "session_id": "s_201_10_5448",
+        "user_id": 201,
+        "event_type": "checkout_start",
+        "product_id": 66,
+        "device_type": "mobile",
+        "traffic_source": "direct",
+        "page": "home"
+      },
+      {
+        "event_id": "e_197_5_7_60479",
+        "event_ts": "2026-03-10 00:13:07",
+        "session_id": "s_197_5_6852",
+        "user_id": 197,
+        "event_type": "add_to_cart",
+        "product_id": 117,
+        "device_type": "mobile",
+        "traffic_source": "linkedin",
+        "page": "home"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-11\\clickstream_2026-03-11.jsonl",
+    "row_count": 688,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_276_5_0_88246",
+        "event_ts": "2026-03-11 00:48:10",
+        "session_id": "s_276_5_8942",
+        "user_id": 276,
+        "event_type": "add_to_cart",
+        "product_id": 74,
+        "device_type": "tablet",
+        "traffic_source": "affiliate",
+        "page": "product"
+      },
+      {
+        "event_id": "e_276_5_1_86531",
+        "event_ts": "2026-03-11 00:48:30",
+        "session_id": "s_276_5_8942",
+        "user_id": 276,
+        "event_type": "page_view",
+        "product_id": 74,
+        "device_type": "tablet",
+        "traffic_source": "affiliate",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_276_5_2_70363",
+        "event_ts": "2026-03-11 00:49:56",
+        "session_id": "s_276_5_8942",
+        "user_id": 276,
+        "event_type": "page_view",
+        "product_id": 104,
+        "device_type": "tablet",
+        "traffic_source": "affiliate",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_115_2_0_54696",
+        "event_ts": "2026-03-11 00:50:53",
+        "session_id": "s_115_2_3131",
+        "user_id": 115,
+        "event_type": "add_to_cart",
+        "product_id": 57,
+        "device_type": "desktop",
+        "traffic_source": "newsletter",
+        "page": "product"
+      },
+      {
+        "event_id": "e_115_2_1_11097",
+        "event_ts": "2026-03-11 00:51:59",
+        "session_id": "s_115_2_3131",
+        "user_id": 115,
+        "event_type": "checkout_start",
+        "product_id": 15,
+        "device_type": "desktop",
+        "traffic_source": "newsletter",
+        "page": "cart"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-12\\clickstream_2026-03-12.jsonl",
+    "row_count": 584,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_87_0_10_93074",
+        "event_ts": "2026-03-12 00:02:07",
+        "session_id": "s_87_0_5428",
+        "user_id": 87,
+        "event_type": "page_view",
+        "product_id": 61,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_66_10_5_75671",
+        "event_ts": "2026-03-12 00:03:41",
+        "session_id": "s_66_10_7002",
+        "user_id": 66,
+        "event_type": "product_view",
+        "product_id": 34,
+        "device_type": "desktop",
+        "traffic_source": "instagram",
+        "page": "search"
+      },
+      {
+        "event_id": "e_87_0_11_89017",
+        "event_ts": "2026-03-12 00:05:41",
+        "session_id": "s_87_0_5428",
+        "user_id": 87,
+        "event_type": "add_to_cart",
+        "product_id": 61,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "home"
+      },
+      {
+        "event_id": "e_66_10_6_94214",
+        "event_ts": "2026-03-12 00:06:05",
+        "session_id": "s_66_10_7002",
+        "user_id": 66,
+        "event_type": "product_view",
+        "product_id": 34,
+        "device_type": "desktop",
+        "traffic_source": "instagram",
+        "page": "home"
+      },
+      {
+        "event_id": "e_66_10_7_52106",
+        "event_ts": "2026-03-12 00:09:11",
+        "session_id": "s_66_10_7002",
+        "user_id": 66,
+        "event_type": "page_view",
+        "product_id": 34,
+        "device_type": "desktop",
+        "traffic_source": "instagram",
+        "page": "home"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-13\\clickstream_2026-03-13.jsonl",
+    "row_count": 595,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_232_8_0_67089",
+        "event_ts": "2026-03-13 00:08:56",
+        "session_id": "s_232_8_6509",
+        "user_id": 232,
+        "event_type": "product_view",
+        "product_id": 123,
+        "device_type": "mobile",
+        "traffic_source": "direct",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_232_8_1_56082",
+        "event_ts": "2026-03-13 00:09:49",
+        "session_id": "s_232_8_6509",
+        "user_id": 232,
+        "event_type": "page_view",
+        "product_id": 123,
+        "device_type": "mobile",
+        "traffic_source": "direct",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_232_8_2_19276",
+        "event_ts": "2026-03-13 00:13:43",
+        "session_id": "s_232_8_6509",
+        "user_id": 232,
+        "event_type": "page_view",
+        "product_id": 123,
+        "device_type": "mobile",
+        "traffic_source": "direct",
+        "page": "search"
+      },
+      {
+        "event_id": "e_232_8_3_97019",
+        "event_ts": "2026-03-13 00:15:50",
+        "session_id": "s_232_8_6509",
+        "user_id": 232,
+        "event_type": "checkout_start",
+        "product_id": 123,
+        "device_type": "mobile",
+        "traffic_source": "direct",
+        "page": "search"
+      },
+      {
+        "event_id": "e_232_8_4_38028",
+        "event_ts": "2026-03-13 00:22:19",
+        "session_id": "s_232_8_6509",
+        "user_id": 232,
+        "event_type": "product_view",
+        "product_id": 123,
+        "device_type": "mobile",
+        "traffic_source": "direct",
+        "page": "search"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-14\\clickstream_2026-03-14.jsonl",
+    "row_count": 669,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_103_6_0_73647",
+        "event_ts": "2026-03-14 00:11:25",
+        "session_id": "s_103_6_2940",
+        "user_id": 103,
+        "event_type": "product_view",
+        "product_id": 126,
+        "device_type": "desktop",
+        "traffic_source": "direct",
+        "page": "search"
+      },
+      {
+        "event_id": "e_103_6_1_89006",
+        "event_ts": "2026-03-14 00:15:30",
+        "session_id": "s_103_6_2940",
+        "user_id": 103,
+        "event_type": "product_view",
+        "product_id": 130,
+        "device_type": "desktop",
+        "traffic_source": "direct",
+        "page": "product"
+      },
+      {
+        "event_id": "e_44_3_0_35201",
+        "event_ts": "2026-03-14 00:17:30",
+        "session_id": "s_44_3_3485",
+        "user_id": 44,
+        "event_type": "product_view",
+        "product_id": 127,
+        "device_type": "mobile",
+        "traffic_source": "instagram",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_103_6_2_45670",
+        "event_ts": "2026-03-14 00:19:27",
+        "session_id": "s_103_6_2940",
+        "user_id": 103,
+        "event_type": "product_view",
+        "product_id": 57,
+        "device_type": "desktop",
+        "traffic_source": "direct",
+        "page": "home"
+      },
+      {
+        "event_id": "e_72_10_0_11397",
+        "event_ts": "2026-03-14 00:21:28",
+        "session_id": "s_72_10_7654",
+        "user_id": 72,
+        "event_type": "product_view",
+        "product_id": 65,
+        "device_type": "tablet",
+        "traffic_source": "newsletter",
+        "page": "cart"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-15\\clickstream_2026-03-15.jsonl",
+    "row_count": 578,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_277_5_1_68099",
+        "event_ts": "2026-03-15 00:01:20",
+        "session_id": "s_277_5_7450",
+        "user_id": 277,
+        "event_type": "product_view",
+        "product_id": 142,
+        "device_type": "tablet",
+        "traffic_source": "instagram",
+        "page": "product"
+      },
+      {
+        "event_id": "e_123_0_12_57090",
+        "event_ts": "2026-03-15 00:02:25",
+        "session_id": "s_123_0_6660",
+        "user_id": 123,
+        "event_type": "add_to_cart",
+        "product_id": 4,
+        "device_type": "tablet",
+        "traffic_source": "affiliate",
+        "page": "search"
+      },
+      {
+        "event_id": "e_277_5_2_61274",
+        "event_ts": "2026-03-15 00:06:17",
+        "session_id": "s_277_5_7450",
+        "user_id": 277,
+        "event_type": "checkout_start",
+        "product_id": 28,
+        "device_type": "tablet",
+        "traffic_source": "instagram",
+        "page": "product"
+      },
+      {
+        "event_id": "e_123_0_13_63782",
+        "event_ts": "2026-03-15 00:06:56",
+        "session_id": "s_123_0_6660",
+        "user_id": 123,
+        "event_type": "product_view",
+        "product_id": 101,
+        "device_type": "tablet",
+        "traffic_source": "affiliate",
+        "page": "product"
+      },
+      {
+        "event_id": "e_123_0_14_59671",
+        "event_ts": "2026-03-15 00:08:17",
+        "session_id": "s_123_0_6660",
+        "user_id": 123,
+        "event_type": "product_view",
+        "product_id": 4,
+        "device_type": "tablet",
+        "traffic_source": "affiliate",
+        "page": "home"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-16\\clickstream_2026-03-16.jsonl",
+    "row_count": 583,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_221_1_4_44827",
+        "event_ts": "2026-03-16 00:00:08",
+        "session_id": "s_221_1_3146",
+        "user_id": 221,
+        "event_type": "checkout_start",
+        "product_id": 98,
+        "device_type": "tablet",
+        "traffic_source": "linkedin",
+        "page": "search"
+      },
+      {
+        "event_id": "e_221_1_5_59326",
+        "event_ts": "2026-03-16 00:02:22",
+        "session_id": "s_221_1_3146",
+        "user_id": 221,
+        "event_type": "page_view",
+        "product_id": 83,
+        "device_type": "tablet",
+        "traffic_source": "linkedin",
+        "page": "home"
+      },
+      {
+        "event_id": "e_109_7_4_87320",
+        "event_ts": "2026-03-16 00:02:37",
+        "session_id": "s_109_7_5916",
+        "user_id": 109,
+        "event_type": "product_view",
+        "product_id": 90,
+        "device_type": "desktop",
+        "traffic_source": "affiliate",
+        "page": "search"
+      },
+      {
+        "event_id": "e_221_1_6_50180",
+        "event_ts": "2026-03-16 00:03:02",
+        "session_id": "s_221_1_3146",
+        "user_id": 221,
+        "event_type": "product_view",
+        "product_id": 82,
+        "device_type": "tablet",
+        "traffic_source": "linkedin",
+        "page": "product"
+      },
+      {
+        "event_id": "e_109_7_5_59894",
+        "event_ts": "2026-03-16 00:03:43",
+        "session_id": "s_109_7_5916",
+        "user_id": 109,
+        "event_type": "remove_from_cart",
+        "product_id": 90,
+        "device_type": "desktop",
+        "traffic_source": "affiliate",
+        "page": "product"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-17\\clickstream_2026-03-17.jsonl",
+    "row_count": 616,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_202_2_0_61845",
+        "event_ts": "2026-03-17 00:02:09",
+        "session_id": "s_202_2_6914",
+        "user_id": 202,
+        "event_type": "product_view",
+        "product_id": 17,
+        "device_type": "tablet",
+        "traffic_source": "instagram",
+        "page": "search"
+      },
+      {
+        "event_id": "e_75_8_1_32548",
+        "event_ts": "2026-03-17 00:02:17",
+        "session_id": "s_75_8_2482",
+        "user_id": 75,
+        "event_type": "product_view",
+        "product_id": 48,
+        "device_type": "mobile",
+        "traffic_source": "google",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_202_2_1_77595",
+        "event_ts": "2026-03-17 00:03:53",
+        "session_id": "s_202_2_6914",
+        "user_id": 202,
+        "event_type": "product_view",
+        "product_id": 90,
+        "device_type": "tablet",
+        "traffic_source": "instagram",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_156_1_0_52442",
+        "event_ts": "2026-03-17 00:05:50",
+        "session_id": "s_156_1_6397",
+        "user_id": 156,
+        "event_type": "remove_from_cart",
+        "product_id": 23,
+        "device_type": "desktop",
+        "traffic_source": "instagram",
+        "page": "search"
+      },
+      {
+        "event_id": "e_75_8_2_16802",
+        "event_ts": "2026-03-17 00:06:33",
+        "session_id": "s_75_8_2482",
+        "user_id": 75,
+        "event_type": "product_view",
+        "product_id": 76,
+        "device_type": "mobile",
+        "traffic_source": "google",
+        "page": "checkout"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-18\\clickstream_2026-03-18.jsonl",
+    "row_count": 561,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_31_4_7_97591",
+        "event_ts": "2026-03-18 00:05:22",
+        "session_id": "s_31_4_3881",
+        "user_id": 31,
+        "event_type": "product_view",
+        "product_id": 40,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_31_4_8_20350",
+        "event_ts": "2026-03-18 00:08:49",
+        "session_id": "s_31_4_3881",
+        "user_id": 31,
+        "event_type": "product_view",
+        "product_id": 126,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "search"
+      },
+      {
+        "event_id": "e_31_4_9_80243",
+        "event_ts": "2026-03-18 00:12:54",
+        "session_id": "s_31_4_3881",
+        "user_id": 31,
+        "event_type": "add_to_cart",
+        "product_id": 126,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "search"
+      },
+      {
+        "event_id": "e_31_4_10_27851",
+        "event_ts": "2026-03-18 00:17:50",
+        "session_id": "s_31_4_3881",
+        "user_id": 31,
+        "event_type": "page_view",
+        "product_id": 125,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_135_8_0_23379",
+        "event_ts": "2026-03-18 00:18:25",
+        "session_id": "s_135_8_2258",
+        "user_id": 135,
+        "event_type": "page_view",
+        "product_id": 123,
+        "device_type": "tablet",
+        "traffic_source": "newsletter",
+        "page": "home"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-19\\clickstream_2026-03-19.jsonl",
+    "row_count": 574,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_207_0_14_31511",
+        "event_ts": "2026-03-19 00:00:45",
+        "session_id": "s_207_0_6380",
+        "user_id": 207,
+        "event_type": "product_view",
+        "product_id": 22,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "product"
+      },
+      {
+        "event_id": "e_19_11_0_36519",
+        "event_ts": "2026-03-19 00:01:03",
+        "session_id": "s_19_11_8930",
+        "user_id": 19,
+        "event_type": "product_view",
+        "product_id": 38,
+        "device_type": "tablet",
+        "traffic_source": "google",
+        "page": "home"
+      },
+      {
+        "event_id": "e_183_6_3_80731",
+        "event_ts": "2026-03-19 00:05:05",
+        "session_id": "s_183_6_1645",
+        "user_id": 183,
+        "event_type": "product_view",
+        "product_id": 49,
+        "device_type": "tablet",
+        "traffic_source": "direct",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_19_11_1_20305",
+        "event_ts": "2026-03-19 00:06:27",
+        "session_id": "s_19_11_8930",
+        "user_id": 19,
+        "event_type": "page_view",
+        "product_id": 38,
+        "device_type": "tablet",
+        "traffic_source": "google",
+        "page": "home"
+      },
+      {
+        "event_id": "e_183_6_4_81334",
+        "event_ts": "2026-03-19 00:07:44",
+        "session_id": "s_183_6_1645",
+        "user_id": 183,
+        "event_type": "product_view",
+        "product_id": 74,
+        "device_type": "tablet",
+        "traffic_source": "direct",
+        "page": "checkout"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-20\\clickstream_2026-03-20.jsonl",
+    "row_count": 588,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_90_2_5_86460",
+        "event_ts": "2026-03-20 00:03:40",
+        "session_id": "s_90_2_5512",
+        "user_id": 90,
+        "event_type": "product_view",
+        "product_id": 90,
+        "device_type": "mobile",
+        "traffic_source": "google",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_90_2_6_37595",
+        "event_ts": "2026-03-20 00:09:29",
+        "session_id": "s_90_2_5512",
+        "user_id": 90,
+        "event_type": "product_view",
+        "product_id": 90,
+        "device_type": "mobile",
+        "traffic_source": "google",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_90_2_7_84730",
+        "event_ts": "2026-03-20 00:09:39",
+        "session_id": "s_90_2_5512",
+        "user_id": 90,
+        "event_type": "page_view",
+        "product_id": 136,
+        "device_type": "mobile",
+        "traffic_source": "google",
+        "page": "product"
+      },
+      {
+        "event_id": "e_39_4_0_79235",
+        "event_ts": "2026-03-20 00:18:18",
+        "session_id": "s_39_4_5127",
+        "user_id": 39,
+        "event_type": "add_to_cart",
+        "product_id": 69,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "search"
+      },
+      {
+        "event_id": "e_39_4_1_96358",
+        "event_ts": "2026-03-20 00:23:35",
+        "session_id": "s_39_4_5127",
+        "user_id": 39,
+        "event_type": "remove_from_cart",
+        "product_id": 69,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "checkout"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-21\\clickstream_2026-03-21.jsonl",
+    "row_count": 631,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_152_2_10_86856",
+        "event_ts": "2026-03-21 00:00:46",
+        "session_id": "s_152_2_7640",
+        "user_id": 152,
+        "event_type": "page_view",
+        "product_id": 81,
+        "device_type": "mobile",
+        "traffic_source": "linkedin",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_236_2_10_47731",
+        "event_ts": "2026-03-21 00:00:58",
+        "session_id": "s_236_2_8710",
+        "user_id": 236,
+        "event_type": "product_view",
+        "product_id": 133,
+        "device_type": "tablet",
+        "traffic_source": "newsletter",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_266_3_6_46683",
+        "event_ts": "2026-03-21 00:01:46",
+        "session_id": "s_266_3_6397",
+        "user_id": 266,
+        "event_type": "page_view",
+        "product_id": 26,
+        "device_type": "mobile",
+        "traffic_source": "linkedin",
+        "page": "home"
+      },
+      {
+        "event_id": "e_152_2_11_16336",
+        "event_ts": "2026-03-21 00:04:29",
+        "session_id": "s_152_2_7640",
+        "user_id": 152,
+        "event_type": "product_view",
+        "product_id": 81,
+        "device_type": "mobile",
+        "traffic_source": "linkedin",
+        "page": "home"
+      },
+      {
+        "event_id": "e_236_2_11_52470",
+        "event_ts": "2026-03-21 00:06:12",
+        "session_id": "s_236_2_8710",
+        "user_id": 236,
+        "event_type": "add_to_cart",
+        "product_id": 133,
+        "device_type": "tablet",
+        "traffic_source": "newsletter",
+        "page": "home"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-22\\clickstream_2026-03-22.jsonl",
+    "row_count": 584,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_242_12_0_94401",
+        "event_ts": "2026-03-22 00:12:46",
+        "session_id": "s_242_12_1583",
+        "user_id": 242,
+        "event_type": "product_view",
+        "product_id": 115,
+        "device_type": "tablet",
+        "traffic_source": "affiliate",
+        "page": "search"
+      },
+      {
+        "event_id": "e_242_12_1_14514",
+        "event_ts": "2026-03-22 00:18:07",
+        "session_id": "s_242_12_1583",
+        "user_id": 242,
+        "event_type": "add_to_cart",
+        "product_id": 42,
+        "device_type": "tablet",
+        "traffic_source": "affiliate",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_242_12_2_73141",
+        "event_ts": "2026-03-22 00:21:51",
+        "session_id": "s_242_12_1583",
+        "user_id": 242,
+        "event_type": "page_view",
+        "product_id": 92,
+        "device_type": "tablet",
+        "traffic_source": "affiliate",
+        "page": "home"
+      },
+      {
+        "event_id": "e_205_1_0_18298",
+        "event_ts": "2026-03-22 01:38:25",
+        "session_id": "s_205_1_9450",
+        "user_id": 205,
+        "event_type": "product_view",
+        "product_id": 100,
+        "device_type": "desktop",
+        "traffic_source": "instagram",
+        "page": "search"
+      },
+      {
+        "event_id": "e_205_1_1_10881",
+        "event_ts": "2026-03-22 01:40:18",
+        "session_id": "s_205_1_9450",
+        "user_id": 205,
+        "event_type": "page_view",
+        "product_id": 100,
+        "device_type": "desktop",
+        "traffic_source": "instagram",
+        "page": "home"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-23\\clickstream_2026-03-23.jsonl",
+    "row_count": 660,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_186_3_0_57513",
+        "event_ts": "2026-03-23 00:28:43",
+        "session_id": "s_186_3_5243",
+        "user_id": 186,
+        "event_type": "page_view",
+        "product_id": 18,
+        "device_type": "tablet",
+        "traffic_source": "instagram",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_18_2_0_87740",
+        "event_ts": "2026-03-23 00:30:49",
+        "session_id": "s_18_2_9425",
+        "user_id": 18,
+        "event_type": "add_to_cart",
+        "product_id": 78,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "product"
+      },
+      {
+        "event_id": "e_18_2_1_94879",
+        "event_ts": "2026-03-23 00:31:08",
+        "session_id": "s_18_2_9425",
+        "user_id": 18,
+        "event_type": "remove_from_cart",
+        "product_id": 126,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_186_3_1_78325",
+        "event_ts": "2026-03-23 00:32:37",
+        "session_id": "s_186_3_5243",
+        "user_id": 186,
+        "event_type": "page_view",
+        "product_id": 135,
+        "device_type": "tablet",
+        "traffic_source": "instagram",
+        "page": "product"
+      },
+      {
+        "event_id": "e_18_2_2_15081",
+        "event_ts": "2026-03-23 00:35:12",
+        "session_id": "s_18_2_9425",
+        "user_id": 18,
+        "event_type": "checkout_start",
+        "product_id": 39,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "checkout"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-24\\clickstream_2026-03-24.jsonl",
+    "row_count": 460,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_140_9_0_76131",
+        "event_ts": "2026-03-24 00:05:33",
+        "session_id": "s_140_9_5264",
+        "user_id": 140,
+        "event_type": "product_view",
+        "product_id": 143,
+        "device_type": "mobile",
+        "traffic_source": "linkedin",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_140_9_1_60618",
+        "event_ts": "2026-03-24 00:08:18",
+        "session_id": "s_140_9_5264",
+        "user_id": 140,
+        "event_type": "page_view",
+        "product_id": 18,
+        "device_type": "mobile",
+        "traffic_source": "linkedin",
+        "page": "home"
+      },
+      {
+        "event_id": "e_140_9_2_36663",
+        "event_ts": "2026-03-24 00:08:39",
+        "session_id": "s_140_9_5264",
+        "user_id": 140,
+        "event_type": "checkout_start",
+        "product_id": 57,
+        "device_type": "mobile",
+        "traffic_source": "linkedin",
+        "page": "product"
+      },
+      {
+        "event_id": "e_16_2_0_38825",
+        "event_ts": "2026-03-24 00:11:43",
+        "session_id": "s_16_2_7088",
+        "user_id": 16,
+        "event_type": "product_view",
+        "product_id": 17,
+        "device_type": "tablet",
+        "traffic_source": "affiliate",
+        "page": "search"
+      },
+      {
+        "event_id": "e_16_2_1_98358",
+        "event_ts": "2026-03-24 00:11:59",
+        "session_id": "s_16_2_7088",
+        "user_id": 16,
+        "event_type": "add_to_cart",
+        "product_id": 17,
+        "device_type": "tablet",
+        "traffic_source": "affiliate",
+        "page": "search"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-25\\clickstream_2026-03-25.jsonl",
+    "row_count": 642,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_271_6_6_68801",
+        "event_ts": "2026-03-25 00:03:33",
+        "session_id": "s_271_6_8858",
+        "user_id": 271,
+        "event_type": "product_view",
+        "product_id": 124,
+        "device_type": "mobile",
+        "traffic_source": "newsletter",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_271_6_7_16020",
+        "event_ts": "2026-03-25 00:10:00",
+        "session_id": "s_271_6_8858",
+        "user_id": 271,
+        "event_type": "product_view",
+        "product_id": 124,
+        "device_type": "mobile",
+        "traffic_source": "newsletter",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_271_6_8_20960",
+        "event_ts": "2026-03-25 00:13:12",
+        "session_id": "s_271_6_8858",
+        "user_id": 271,
+        "event_type": "page_view",
+        "product_id": 124,
+        "device_type": "mobile",
+        "traffic_source": "newsletter",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_271_6_9_97430",
+        "event_ts": "2026-03-25 00:13:42",
+        "session_id": "s_271_6_8858",
+        "user_id": 271,
+        "event_type": "product_view",
+        "product_id": 48,
+        "device_type": "mobile",
+        "traffic_source": "newsletter",
+        "page": "search"
+      },
+      {
+        "event_id": "e_220_12_0_93732",
+        "event_ts": "2026-03-25 00:20:14",
+        "session_id": "s_220_12_9826",
+        "user_id": 220,
+        "event_type": "product_view",
+        "product_id": 68,
+        "device_type": "mobile",
+        "traffic_source": "direct",
+        "page": "cart"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-26\\clickstream_2026-03-26.jsonl",
+    "row_count": 611,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_123_1_5_98599",
+        "event_ts": "2026-03-26 00:03:19",
+        "session_id": "s_123_1_6837",
+        "user_id": 123,
+        "event_type": "page_view",
+        "product_id": 91,
+        "device_type": "tablet",
+        "traffic_source": "newsletter",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_123_1_6_97689",
+        "event_ts": "2026-03-26 00:05:43",
+        "session_id": "s_123_1_6837",
+        "user_id": 123,
+        "event_type": "checkout_start",
+        "product_id": 44,
+        "device_type": "tablet",
+        "traffic_source": "newsletter",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_123_1_7_14322",
+        "event_ts": "2026-03-26 00:06:07",
+        "session_id": "s_123_1_6837",
+        "user_id": 123,
+        "event_type": "product_view",
+        "product_id": 44,
+        "device_type": "tablet",
+        "traffic_source": "newsletter",
+        "page": "home"
+      },
+      {
+        "event_id": "e_146_7_6_58991",
+        "event_ts": "2026-03-26 00:06:23",
+        "session_id": "s_146_7_1429",
+        "user_id": 146,
+        "event_type": "add_to_cart",
+        "product_id": 14,
+        "device_type": "tablet",
+        "traffic_source": "affiliate",
+        "page": "home"
+      },
+      {
+        "event_id": "e_123_1_8_29765",
+        "event_ts": "2026-03-26 00:08:17",
+        "session_id": "s_123_1_6837",
+        "user_id": 123,
+        "event_type": "product_view",
+        "product_id": 44,
+        "device_type": "tablet",
+        "traffic_source": "newsletter",
+        "page": "cart"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-27\\clickstream_2026-03-27.jsonl",
+    "row_count": 528,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_140_4_13_34829",
+        "event_ts": "2026-03-27 00:02:18",
+        "session_id": "s_140_4_2997",
+        "user_id": 140,
+        "event_type": "product_view",
+        "product_id": 83,
+        "device_type": "desktop",
+        "traffic_source": "direct",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_140_4_14_70447",
+        "event_ts": "2026-03-27 00:03:58",
+        "session_id": "s_140_4_2997",
+        "user_id": 140,
+        "event_type": "add_to_cart",
+        "product_id": 83,
+        "device_type": "desktop",
+        "traffic_source": "direct",
+        "page": "home"
+      },
+      {
+        "event_id": "e_63_5_0_80775",
+        "event_ts": "2026-03-27 00:13:22",
+        "session_id": "s_63_5_2928",
+        "user_id": 63,
+        "event_type": "page_view",
+        "product_id": 83,
+        "device_type": "tablet",
+        "traffic_source": "direct",
+        "page": "product"
+      },
+      {
+        "event_id": "e_63_5_1_83697",
+        "event_ts": "2026-03-27 00:17:52",
+        "session_id": "s_63_5_2928",
+        "user_id": 63,
+        "event_type": "product_view",
+        "product_id": 83,
+        "device_type": "tablet",
+        "traffic_source": "direct",
+        "page": "search"
+      },
+      {
+        "event_id": "e_63_5_2_58699",
+        "event_ts": "2026-03-27 00:20:51",
+        "session_id": "s_63_5_2928",
+        "user_id": 63,
+        "event_type": "product_view",
+        "product_id": 83,
+        "device_type": "tablet",
+        "traffic_source": "direct",
+        "page": "cart"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-28\\clickstream_2026-03-28.jsonl",
+    "row_count": 563,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_293_2_0_19066",
+        "event_ts": "2026-03-28 00:00:38",
+        "session_id": "s_293_2_1518",
+        "user_id": 293,
+        "event_type": "checkout_start",
+        "product_id": 66,
+        "device_type": "mobile",
+        "traffic_source": "direct",
+        "page": "product"
+      },
+      {
+        "event_id": "e_192_1_8_63881",
+        "event_ts": "2026-03-28 00:01:46",
+        "session_id": "s_192_1_4309",
+        "user_id": 192,
+        "event_type": "product_view",
+        "product_id": 52,
+        "device_type": "tablet",
+        "traffic_source": "affiliate",
+        "page": "product"
+      },
+      {
+        "event_id": "e_155_5_2_23062",
+        "event_ts": "2026-03-28 00:02:49",
+        "session_id": "s_155_5_4418",
+        "user_id": 155,
+        "event_type": "page_view",
+        "product_id": 105,
+        "device_type": "mobile",
+        "traffic_source": "linkedin",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_276_9_1_79109",
+        "event_ts": "2026-03-28 00:02:52",
+        "session_id": "s_276_9_7378",
+        "user_id": 276,
+        "event_type": "product_view",
+        "product_id": 17,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_19_7_8_47332",
+        "event_ts": "2026-03-28 00:02:52",
+        "session_id": "s_19_7_1321",
+        "user_id": 19,
+        "event_type": "page_view",
+        "product_id": 65,
+        "device_type": "desktop",
+        "traffic_source": "affiliate",
+        "page": "cart"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-29\\clickstream_2026-03-29.jsonl",
+    "row_count": 473,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_227_7_0_57206",
+        "event_ts": "2026-03-29 00:22:40",
+        "session_id": "s_227_7_4484",
+        "user_id": 227,
+        "event_type": "product_view",
+        "product_id": 142,
+        "device_type": "tablet",
+        "traffic_source": "direct",
+        "page": "product"
+      },
+      {
+        "event_id": "e_227_7_1_52284",
+        "event_ts": "2026-03-29 00:24:19",
+        "session_id": "s_227_7_4484",
+        "user_id": 227,
+        "event_type": "product_view",
+        "product_id": 16,
+        "device_type": "tablet",
+        "traffic_source": "direct",
+        "page": "product"
+      },
+      {
+        "event_id": "e_227_7_2_85966",
+        "event_ts": "2026-03-29 00:24:47",
+        "session_id": "s_227_7_4484",
+        "user_id": 227,
+        "event_type": "page_view",
+        "product_id": 16,
+        "device_type": "tablet",
+        "traffic_source": "direct",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_227_7_3_24979",
+        "event_ts": "2026-03-29 00:28:19",
+        "session_id": "s_227_7_4484",
+        "user_id": 227,
+        "event_type": "product_view",
+        "product_id": 121,
+        "device_type": "tablet",
+        "traffic_source": "direct",
+        "page": "product"
+      },
+      {
+        "event_id": "e_227_7_4_83974",
+        "event_ts": "2026-03-29 00:31:52",
+        "session_id": "s_227_7_4484",
+        "user_id": 227,
+        "event_type": "product_view",
+        "product_id": 16,
+        "device_type": "tablet",
+        "traffic_source": "direct",
+        "page": "cart"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-30\\clickstream_2026-03-30.jsonl",
+    "row_count": 677,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_224_10_3_55293",
+        "event_ts": "2026-03-30 00:01:19",
+        "session_id": "s_224_10_2027",
+        "user_id": 224,
+        "event_type": "add_to_cart",
+        "product_id": 18,
+        "device_type": "desktop",
+        "traffic_source": "instagram",
+        "page": "home"
+      },
+      {
+        "event_id": "e_99_5_0_94907",
+        "event_ts": "2026-03-30 00:46:42",
+        "session_id": "s_99_5_3173",
+        "user_id": 99,
+        "event_type": "page_view",
+        "product_id": 70,
+        "device_type": "tablet",
+        "traffic_source": "linkedin",
+        "page": "product"
+      },
+      {
+        "event_id": "e_99_5_1_41426",
+        "event_ts": "2026-03-30 00:52:21",
+        "session_id": "s_99_5_3173",
+        "user_id": 99,
+        "event_type": "page_view",
+        "product_id": 70,
+        "device_type": "tablet",
+        "traffic_source": "linkedin",
+        "page": "home"
+      },
+      {
+        "event_id": "e_99_5_2_40387",
+        "event_ts": "2026-03-30 00:55:37",
+        "session_id": "s_99_5_3173",
+        "user_id": 99,
+        "event_type": "product_view",
+        "product_id": 70,
+        "device_type": "tablet",
+        "traffic_source": "linkedin",
+        "page": "home"
+      },
+      {
+        "event_id": "e_99_5_3_57277",
+        "event_ts": "2026-03-30 00:59:14",
+        "session_id": "s_99_5_3173",
+        "user_id": 99,
+        "event_type": "checkout_start",
+        "product_id": 70,
+        "device_type": "tablet",
+        "traffic_source": "linkedin",
+        "page": "checkout"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-03-31\\clickstream_2026-03-31.jsonl",
+    "row_count": 512,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_167_1_1_56776",
+        "event_ts": "2026-03-31 00:00:15",
+        "session_id": "s_167_1_4454",
+        "user_id": 167,
+        "event_type": "page_view",
+        "product_id": 16,
+        "device_type": "tablet",
+        "traffic_source": "direct",
+        "page": "home"
+      },
+      {
+        "event_id": "purchase_10598",
+        "event_ts": "2026-03-31 00:01:10",
+        "session_id": "s_257_8_2183",
+        "user_id": 257,
+        "event_type": "purchase",
+        "product_id": 96,
+        "device_type": "mobile",
+        "traffic_source": "google",
+        "page": "confirmation"
+      },
+      {
+        "event_id": "e_167_1_2_74677",
+        "event_ts": "2026-03-31 00:06:49",
+        "session_id": "s_167_1_4454",
+        "user_id": 167,
+        "event_type": "page_view",
+        "product_id": 57,
+        "device_type": "tablet",
+        "traffic_source": "direct",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_167_1_3_17646",
+        "event_ts": "2026-03-31 00:10:14",
+        "session_id": "s_167_1_4454",
+        "user_id": 167,
+        "event_type": "product_view",
+        "product_id": 16,
+        "device_type": "tablet",
+        "traffic_source": "direct",
+        "page": "home"
+      },
+      {
+        "event_id": "e_167_1_4_47376",
+        "event_ts": "2026-03-31 00:14:26",
+        "session_id": "s_167_1_4454",
+        "user_id": 167,
+        "event_type": "product_view",
+        "product_id": 10,
+        "device_type": "tablet",
+        "traffic_source": "direct",
+        "page": "product"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-04-01\\clickstream_2026-04-01.jsonl",
+    "row_count": 554,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_7_2_3_89887",
+        "event_ts": "2026-04-01 00:01:31",
+        "session_id": "s_7_2_9888",
+        "user_id": 7,
+        "event_type": "product_view",
+        "product_id": 115,
+        "device_type": "desktop",
+        "traffic_source": "linkedin",
+        "page": "home"
+      },
+      {
+        "event_id": "e_7_2_4_63410",
+        "event_ts": "2026-04-01 00:02:56",
+        "session_id": "s_7_2_9888",
+        "user_id": 7,
+        "event_type": "product_view",
+        "product_id": 43,
+        "device_type": "desktop",
+        "traffic_source": "linkedin",
+        "page": "home"
+      },
+      {
+        "event_id": "e_56_9_4_16498",
+        "event_ts": "2026-04-01 00:03:23",
+        "session_id": "s_56_9_8879",
+        "user_id": 56,
+        "event_type": "product_view",
+        "product_id": 34,
+        "device_type": "desktop",
+        "traffic_source": "newsletter",
+        "page": "search"
+      },
+      {
+        "event_id": "e_56_9_5_44101",
+        "event_ts": "2026-04-01 00:05:29",
+        "session_id": "s_56_9_8879",
+        "user_id": 56,
+        "event_type": "add_to_cart",
+        "product_id": 125,
+        "device_type": "desktop",
+        "traffic_source": "newsletter",
+        "page": "search"
+      },
+      {
+        "event_id": "e_56_9_6_44300",
+        "event_ts": "2026-04-01 00:05:45",
+        "session_id": "s_56_9_8879",
+        "user_id": 56,
+        "event_type": "product_view",
+        "product_id": 34,
+        "device_type": "desktop",
+        "traffic_source": "newsletter",
+        "page": "cart"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-04-02\\clickstream_2026-04-02.jsonl",
+    "row_count": 436,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_15_8_0_34293",
+        "event_ts": "2026-04-02 00:12:34",
+        "session_id": "s_15_8_2460",
+        "user_id": 15,
+        "event_type": "product_view",
+        "product_id": 111,
+        "device_type": "tablet",
+        "traffic_source": "linkedin",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_213_1_0_69163",
+        "event_ts": "2026-04-02 00:14:25",
+        "session_id": "s_213_1_2724",
+        "user_id": 213,
+        "event_type": "add_to_cart",
+        "product_id": 126,
+        "device_type": "desktop",
+        "traffic_source": "instagram",
+        "page": "home"
+      },
+      {
+        "event_id": "e_15_8_1_90768",
+        "event_ts": "2026-04-02 00:17:51",
+        "session_id": "s_15_8_2460",
+        "user_id": 15,
+        "event_type": "add_to_cart",
+        "product_id": 97,
+        "device_type": "tablet",
+        "traffic_source": "linkedin",
+        "page": "product"
+      },
+      {
+        "event_id": "e_213_1_1_47171",
+        "event_ts": "2026-04-02 00:17:59",
+        "session_id": "s_213_1_2724",
+        "user_id": 213,
+        "event_type": "page_view",
+        "product_id": 126,
+        "device_type": "desktop",
+        "traffic_source": "instagram",
+        "page": "product"
+      },
+      {
+        "event_id": "e_15_8_2_84302",
+        "event_ts": "2026-04-02 00:21:51",
+        "session_id": "s_15_8_2460",
+        "user_id": 15,
+        "event_type": "product_view",
+        "product_id": 111,
+        "device_type": "tablet",
+        "traffic_source": "linkedin",
+        "page": "product"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-04-03\\clickstream_2026-04-03.jsonl",
+    "row_count": 527,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_82_9_0_71889",
+        "event_ts": "2026-04-03 00:30:36",
+        "session_id": "s_82_9_2152",
+        "user_id": 82,
+        "event_type": "page_view",
+        "product_id": 102,
+        "device_type": "mobile",
+        "traffic_source": "instagram",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_82_9_1_45956",
+        "event_ts": "2026-04-03 00:31:07",
+        "session_id": "s_82_9_2152",
+        "user_id": 82,
+        "event_type": "page_view",
+        "product_id": 102,
+        "device_type": "mobile",
+        "traffic_source": "instagram",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_82_9_2_79850",
+        "event_ts": "2026-04-03 00:35:54",
+        "session_id": "s_82_9_2152",
+        "user_id": 82,
+        "event_type": "product_view",
+        "product_id": 102,
+        "device_type": "mobile",
+        "traffic_source": "instagram",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_82_9_3_95560",
+        "event_ts": "2026-04-03 00:38:29",
+        "session_id": "s_82_9_2152",
+        "user_id": 82,
+        "event_type": "page_view",
+        "product_id": 102,
+        "device_type": "mobile",
+        "traffic_source": "instagram",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_82_9_4_65838",
+        "event_ts": "2026-04-03 00:39:24",
+        "session_id": "s_82_9_2152",
+        "user_id": 82,
+        "event_type": "remove_from_cart",
+        "product_id": 102,
+        "device_type": "mobile",
+        "traffic_source": "instagram",
+        "page": "home"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-04-04\\clickstream_2026-04-04.jsonl",
+    "row_count": 570,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_141_1_2_24763",
+        "event_ts": "2026-04-04 00:00:13",
+        "session_id": "s_141_1_2022",
+        "user_id": 141,
+        "event_type": "page_view",
+        "product_id": 56,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "product"
+      },
+      {
+        "event_id": "e_146_0_9_73162",
+        "event_ts": "2026-04-04 00:03:18",
+        "session_id": "s_146_0_1732",
+        "user_id": 146,
+        "event_type": "product_view",
+        "product_id": 34,
+        "device_type": "tablet",
+        "traffic_source": "newsletter",
+        "page": "product"
+      },
+      {
+        "event_id": "e_141_1_3_34355",
+        "event_ts": "2026-04-04 00:05:35",
+        "session_id": "s_141_1_2022",
+        "user_id": 141,
+        "event_type": "product_view",
+        "product_id": 48,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_146_0_10_65663",
+        "event_ts": "2026-04-04 00:05:45",
+        "session_id": "s_146_0_1732",
+        "user_id": 146,
+        "event_type": "checkout_start",
+        "product_id": 127,
+        "device_type": "tablet",
+        "traffic_source": "newsletter",
+        "page": "home"
+      },
+      {
+        "event_id": "e_234_1_0_99437",
+        "event_ts": "2026-04-04 00:07:04",
+        "session_id": "s_234_1_1179",
+        "user_id": 234,
+        "event_type": "add_to_cart",
+        "product_id": 122,
+        "device_type": "desktop",
+        "traffic_source": "direct",
+        "page": "checkout"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-04-05\\clickstream_2026-04-05.jsonl",
+    "row_count": 542,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_169_6_0_42617",
+        "event_ts": "2026-04-05 00:57:49",
+        "session_id": "s_169_6_3747",
+        "user_id": 169,
+        "event_type": "product_view",
+        "product_id": 57,
+        "device_type": "tablet",
+        "traffic_source": "newsletter",
+        "page": "search"
+      },
+      {
+        "event_id": "e_169_6_1_86094",
+        "event_ts": "2026-04-05 01:01:19",
+        "session_id": "s_169_6_3747",
+        "user_id": 169,
+        "event_type": "product_view",
+        "product_id": 37,
+        "device_type": "tablet",
+        "traffic_source": "newsletter",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_169_6_2_86599",
+        "event_ts": "2026-04-05 01:01:41",
+        "session_id": "s_169_6_3747",
+        "user_id": 169,
+        "event_type": "checkout_start",
+        "product_id": 57,
+        "device_type": "tablet",
+        "traffic_source": "newsletter",
+        "page": "home"
+      },
+      {
+        "event_id": "e_169_6_3_36888",
+        "event_ts": "2026-04-05 01:03:07",
+        "session_id": "s_169_6_3747",
+        "user_id": 169,
+        "event_type": "product_view",
+        "product_id": 37,
+        "device_type": "tablet",
+        "traffic_source": "newsletter",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_169_6_4_96653",
+        "event_ts": "2026-04-05 01:05:26",
+        "session_id": "s_169_6_3747",
+        "user_id": 169,
+        "event_type": "checkout_start",
+        "product_id": 32,
+        "device_type": "tablet",
+        "traffic_source": "newsletter",
+        "page": "cart"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-04-06\\clickstream_2026-04-06.jsonl",
+    "row_count": 580,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_192_8_4_94356",
+        "event_ts": "2026-04-06 00:00:23",
+        "session_id": "s_192_8_1234",
+        "user_id": 192,
+        "event_type": "product_view",
+        "product_id": 33,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "search"
+      },
+      {
+        "event_id": "e_192_8_5_69601",
+        "event_ts": "2026-04-06 00:05:34",
+        "session_id": "s_192_8_1234",
+        "user_id": 192,
+        "event_type": "product_view",
+        "product_id": 32,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_192_8_6_38885",
+        "event_ts": "2026-04-06 00:10:07",
+        "session_id": "s_192_8_1234",
+        "user_id": 192,
+        "event_type": "page_view",
+        "product_id": 32,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_192_8_7_45259",
+        "event_ts": "2026-04-06 00:10:24",
+        "session_id": "s_192_8_1234",
+        "user_id": 192,
+        "event_type": "product_view",
+        "product_id": 33,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_192_8_8_77798",
+        "event_ts": "2026-04-06 00:11:15",
+        "session_id": "s_192_8_1234",
+        "user_id": 192,
+        "event_type": "product_view",
+        "product_id": 33,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "home"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-04-07\\clickstream_2026-04-07.jsonl",
+    "row_count": 474,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_147_2_0_86764",
+        "event_ts": "2026-04-07 00:03:14",
+        "session_id": "s_147_2_6784",
+        "user_id": 147,
+        "event_type": "remove_from_cart",
+        "product_id": 6,
+        "device_type": "mobile",
+        "traffic_source": "newsletter",
+        "page": "home"
+      },
+      {
+        "event_id": "e_147_2_1_14378",
+        "event_ts": "2026-04-07 00:07:43",
+        "session_id": "s_147_2_6784",
+        "user_id": 147,
+        "event_type": "product_view",
+        "product_id": 6,
+        "device_type": "mobile",
+        "traffic_source": "newsletter",
+        "page": "product"
+      },
+      {
+        "event_id": "e_147_2_2_57225",
+        "event_ts": "2026-04-07 00:09:53",
+        "session_id": "s_147_2_6784",
+        "user_id": 147,
+        "event_type": "product_view",
+        "product_id": 6,
+        "device_type": "mobile",
+        "traffic_source": "newsletter",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_147_2_3_66975",
+        "event_ts": "2026-04-07 00:16:21",
+        "session_id": "s_147_2_6784",
+        "user_id": 147,
+        "event_type": "checkout_start",
+        "product_id": 6,
+        "device_type": "mobile",
+        "traffic_source": "newsletter",
+        "page": "search"
+      },
+      {
+        "event_id": "e_147_2_4_75927",
+        "event_ts": "2026-04-07 00:18:44",
+        "session_id": "s_147_2_6784",
+        "user_id": 147,
+        "event_type": "product_view",
+        "product_id": 6,
+        "device_type": "mobile",
+        "traffic_source": "newsletter",
+        "page": "cart"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-04-08\\clickstream_2026-04-08.jsonl",
+    "row_count": 626,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_21_4_0_38613",
+        "event_ts": "2026-04-08 00:01:37",
+        "session_id": "s_21_4_5533",
+        "user_id": 21,
+        "event_type": "page_view",
+        "product_id": 11,
+        "device_type": "desktop",
+        "traffic_source": "instagram",
+        "page": "home"
+      },
+      {
+        "event_id": "e_21_4_1_32897",
+        "event_ts": "2026-04-08 00:08:00",
+        "session_id": "s_21_4_5533",
+        "user_id": 21,
+        "event_type": "product_view",
+        "product_id": 118,
+        "device_type": "desktop",
+        "traffic_source": "instagram",
+        "page": "product"
+      },
+      {
+        "event_id": "e_21_4_2_58709",
+        "event_ts": "2026-04-08 00:09:38",
+        "session_id": "s_21_4_5533",
+        "user_id": 21,
+        "event_type": "product_view",
+        "product_id": 49,
+        "device_type": "desktop",
+        "traffic_source": "instagram",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_21_4_3_92106",
+        "event_ts": "2026-04-08 00:15:52",
+        "session_id": "s_21_4_5533",
+        "user_id": 21,
+        "event_type": "product_view",
+        "product_id": 11,
+        "device_type": "desktop",
+        "traffic_source": "instagram",
+        "page": "search"
+      },
+      {
+        "event_id": "e_8_0_0_25445",
+        "event_ts": "2026-04-08 00:19:15",
+        "session_id": "s_8_0_4879",
+        "user_id": 8,
+        "event_type": "page_view",
+        "product_id": 138,
+        "device_type": "desktop",
+        "traffic_source": "direct",
+        "page": "cart"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-04-09\\clickstream_2026-04-09.jsonl",
+    "row_count": 628,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_105_8_1_90349",
+        "event_ts": "2026-04-09 00:01:09",
+        "session_id": "s_105_8_9489",
+        "user_id": 105,
+        "event_type": "product_view",
+        "product_id": 27,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_105_8_2_28254",
+        "event_ts": "2026-04-09 00:05:13",
+        "session_id": "s_105_8_9489",
+        "user_id": 105,
+        "event_type": "page_view",
+        "product_id": 141,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "product"
+      },
+      {
+        "event_id": "e_105_8_3_13705",
+        "event_ts": "2026-04-09 00:07:24",
+        "session_id": "s_105_8_9489",
+        "user_id": 105,
+        "event_type": "product_view",
+        "product_id": 27,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_105_8_4_23104",
+        "event_ts": "2026-04-09 00:11:40",
+        "session_id": "s_105_8_9489",
+        "user_id": 105,
+        "event_type": "page_view",
+        "product_id": 141,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_105_8_5_70877",
+        "event_ts": "2026-04-09 00:17:09",
+        "session_id": "s_105_8_9489",
+        "user_id": 105,
+        "event_type": "product_view",
+        "product_id": 22,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "cart"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-04-10\\clickstream_2026-04-10.jsonl",
+    "row_count": 529,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_128_5_7_45099",
+        "event_ts": "2026-04-10 00:01:16",
+        "session_id": "s_128_5_4255",
+        "user_id": 128,
+        "event_type": "product_view",
+        "product_id": 35,
+        "device_type": "mobile",
+        "traffic_source": "instagram",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_93_8_4_21700",
+        "event_ts": "2026-04-10 00:02:46",
+        "session_id": "s_93_8_1783",
+        "user_id": 93,
+        "event_type": "add_to_cart",
+        "product_id": 32,
+        "device_type": "tablet",
+        "traffic_source": "google",
+        "page": "home"
+      },
+      {
+        "event_id": "e_128_5_8_50025",
+        "event_ts": "2026-04-10 00:06:34",
+        "session_id": "s_128_5_4255",
+        "user_id": 128,
+        "event_type": "page_view",
+        "product_id": 35,
+        "device_type": "mobile",
+        "traffic_source": "instagram",
+        "page": "home"
+      },
+      {
+        "event_id": "e_93_8_5_23259",
+        "event_ts": "2026-04-10 00:07:01",
+        "session_id": "s_93_8_1783",
+        "user_id": 93,
+        "event_type": "page_view",
+        "product_id": 32,
+        "device_type": "tablet",
+        "traffic_source": "google",
+        "page": "search"
+      },
+      {
+        "event_id": "e_128_5_9_92354",
+        "event_ts": "2026-04-10 00:10:33",
+        "session_id": "s_128_5_4255",
+        "user_id": 128,
+        "event_type": "remove_from_cart",
+        "product_id": 35,
+        "device_type": "mobile",
+        "traffic_source": "instagram",
+        "page": "product"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-04-11\\clickstream_2026-04-11.jsonl",
+    "row_count": 481,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_141_2_0_71062",
+        "event_ts": "2026-04-11 00:15:16",
+        "session_id": "s_141_2_4662",
+        "user_id": 141,
+        "event_type": "page_view",
+        "product_id": 95,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_141_2_1_74279",
+        "event_ts": "2026-04-11 00:16:59",
+        "session_id": "s_141_2_4662",
+        "user_id": 141,
+        "event_type": "page_view",
+        "product_id": 95,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "home"
+      },
+      {
+        "event_id": "e_141_2_2_66759",
+        "event_ts": "2026-04-11 00:22:32",
+        "session_id": "s_141_2_4662",
+        "user_id": 141,
+        "event_type": "page_view",
+        "product_id": 25,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_116_3_0_62910",
+        "event_ts": "2026-04-11 00:25:14",
+        "session_id": "s_116_3_4032",
+        "user_id": 116,
+        "event_type": "page_view",
+        "product_id": 119,
+        "device_type": "mobile",
+        "traffic_source": "direct",
+        "page": "search"
+      },
+      {
+        "event_id": "e_141_2_3_96840",
+        "event_ts": "2026-04-11 00:28:05",
+        "session_id": "s_141_2_4662",
+        "user_id": 141,
+        "event_type": "checkout_start",
+        "product_id": 121,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "home"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-04-12\\clickstream_2026-04-12.jsonl",
+    "row_count": 605,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_28_3_3_68008",
+        "event_ts": "2026-04-12 00:00:39",
+        "session_id": "s_28_3_6630",
+        "user_id": 28,
+        "event_type": "add_to_cart",
+        "product_id": 14,
+        "device_type": "tablet",
+        "traffic_source": "instagram",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_28_3_4_34307",
+        "event_ts": "2026-04-12 00:03:29",
+        "session_id": "s_28_3_6630",
+        "user_id": 28,
+        "event_type": "product_view",
+        "product_id": 14,
+        "device_type": "tablet",
+        "traffic_source": "instagram",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_28_3_5_29414",
+        "event_ts": "2026-04-12 00:05:37",
+        "session_id": "s_28_3_6630",
+        "user_id": 28,
+        "event_type": "add_to_cart",
+        "product_id": 14,
+        "device_type": "tablet",
+        "traffic_source": "instagram",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_28_3_6_15027",
+        "event_ts": "2026-04-12 00:06:01",
+        "session_id": "s_28_3_6630",
+        "user_id": 28,
+        "event_type": "page_view",
+        "product_id": 92,
+        "device_type": "tablet",
+        "traffic_source": "instagram",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_28_3_7_92055",
+        "event_ts": "2026-04-12 00:11:36",
+        "session_id": "s_28_3_6630",
+        "user_id": 28,
+        "event_type": "product_view",
+        "product_id": 14,
+        "device_type": "tablet",
+        "traffic_source": "instagram",
+        "page": "search"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-04-13\\clickstream_2026-04-13.jsonl",
+    "row_count": 787,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_139_4_0_80490",
+        "event_ts": "2026-04-13 00:09:47",
+        "session_id": "s_139_4_5062",
+        "user_id": 139,
+        "event_type": "product_view",
+        "product_id": 47,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "product"
+      },
+      {
+        "event_id": "e_139_4_1_36856",
+        "event_ts": "2026-04-13 00:15:35",
+        "session_id": "s_139_4_5062",
+        "user_id": 139,
+        "event_type": "product_view",
+        "product_id": 80,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "home"
+      },
+      {
+        "event_id": "e_139_4_2_40105",
+        "event_ts": "2026-04-13 00:20:58",
+        "session_id": "s_139_4_5062",
+        "user_id": 139,
+        "event_type": "product_view",
+        "product_id": 47,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "product"
+      },
+      {
+        "event_id": "e_139_4_3_78637",
+        "event_ts": "2026-04-13 00:22:05",
+        "session_id": "s_139_4_5062",
+        "user_id": 139,
+        "event_type": "add_to_cart",
+        "product_id": 24,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_139_4_4_26684",
+        "event_ts": "2026-04-13 00:27:13",
+        "session_id": "s_139_4_5062",
+        "user_id": 139,
+        "event_type": "page_view",
+        "product_id": 56,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "checkout"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-04-14\\clickstream_2026-04-14.jsonl",
+    "row_count": 601,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_59_2_6_17777",
+        "event_ts": "2026-04-14 00:00:44",
+        "session_id": "s_59_2_5541",
+        "user_id": 59,
+        "event_type": "product_view",
+        "product_id": 37,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_59_2_7_91671",
+        "event_ts": "2026-04-14 00:02:29",
+        "session_id": "s_59_2_5541",
+        "user_id": 59,
+        "event_type": "add_to_cart",
+        "product_id": 119,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_128_3_1_49997",
+        "event_ts": "2026-04-14 00:02:47",
+        "session_id": "s_128_3_6200",
+        "user_id": 128,
+        "event_type": "product_view",
+        "product_id": 96,
+        "device_type": "tablet",
+        "traffic_source": "instagram",
+        "page": "home"
+      },
+      {
+        "event_id": "e_128_3_2_25570",
+        "event_ts": "2026-04-14 00:03:35",
+        "session_id": "s_128_3_6200",
+        "user_id": 128,
+        "event_type": "product_view",
+        "product_id": 112,
+        "device_type": "tablet",
+        "traffic_source": "instagram",
+        "page": "home"
+      },
+      {
+        "event_id": "e_173_1_8_62065",
+        "event_ts": "2026-04-14 00:04:50",
+        "session_id": "s_173_1_1595",
+        "user_id": 173,
+        "event_type": "page_view",
+        "product_id": 24,
+        "device_type": "tablet",
+        "traffic_source": "affiliate",
+        "page": "search"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-04-15\\clickstream_2026-04-15.jsonl",
+    "row_count": 558,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_99_2_0_14318",
+        "event_ts": "2026-04-15 00:15:48",
+        "session_id": "s_99_2_9998",
+        "user_id": 99,
+        "event_type": "add_to_cart",
+        "product_id": 4,
+        "device_type": "desktop",
+        "traffic_source": "linkedin",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_99_2_1_76550",
+        "event_ts": "2026-04-15 00:20:41",
+        "session_id": "s_99_2_9998",
+        "user_id": 99,
+        "event_type": "page_view",
+        "product_id": 4,
+        "device_type": "desktop",
+        "traffic_source": "linkedin",
+        "page": "product"
+      },
+      {
+        "event_id": "purchase_10670",
+        "event_ts": "2026-04-15 00:21:20",
+        "session_id": "s_285_7_4361",
+        "user_id": 285,
+        "event_type": "purchase",
+        "product_id": 88,
+        "device_type": "tablet",
+        "traffic_source": "newsletter",
+        "page": "confirmation"
+      },
+      {
+        "event_id": "e_99_2_2_89701",
+        "event_ts": "2026-04-15 00:25:04",
+        "session_id": "s_99_2_9998",
+        "user_id": 99,
+        "event_type": "checkout_start",
+        "product_id": 4,
+        "device_type": "desktop",
+        "traffic_source": "linkedin",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_99_2_3_26411",
+        "event_ts": "2026-04-15 00:29:00",
+        "session_id": "s_99_2_9998",
+        "user_id": 99,
+        "event_type": "checkout_start",
+        "product_id": 4,
+        "device_type": "desktop",
+        "traffic_source": "linkedin",
+        "page": "search"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-04-16\\clickstream_2026-04-16.jsonl",
+    "row_count": 590,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_79_10_0_94070",
+        "event_ts": "2026-04-16 00:34:33",
+        "session_id": "s_79_10_2267",
+        "user_id": 79,
+        "event_type": "product_view",
+        "product_id": 83,
+        "device_type": "desktop",
+        "traffic_source": "direct",
+        "page": "home"
+      },
+      {
+        "event_id": "e_79_10_1_82741",
+        "event_ts": "2026-04-16 00:39:51",
+        "session_id": "s_79_10_2267",
+        "user_id": 79,
+        "event_type": "product_view",
+        "product_id": 83,
+        "device_type": "desktop",
+        "traffic_source": "direct",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_79_10_2_35704",
+        "event_ts": "2026-04-16 00:42:12",
+        "session_id": "s_79_10_2267",
+        "user_id": 79,
+        "event_type": "product_view",
+        "product_id": 83,
+        "device_type": "desktop",
+        "traffic_source": "direct",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_79_10_3_82145",
+        "event_ts": "2026-04-16 00:42:55",
+        "session_id": "s_79_10_2267",
+        "user_id": 79,
+        "event_type": "product_view",
+        "product_id": 83,
+        "device_type": "desktop",
+        "traffic_source": "direct",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_79_10_4_50766",
+        "event_ts": "2026-04-16 00:45:16",
+        "session_id": "s_79_10_2267",
+        "user_id": 79,
+        "event_type": "product_view",
+        "product_id": 83,
+        "device_type": "desktop",
+        "traffic_source": "direct",
+        "page": "product"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-04-17\\clickstream_2026-04-17.jsonl",
+    "row_count": 649,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_265_9_0_66001",
+        "event_ts": "2026-04-17 00:28:03",
+        "session_id": "s_265_9_4681",
+        "user_id": 265,
+        "event_type": "product_view",
+        "product_id": 81,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "home"
+      },
+      {
+        "event_id": "e_265_9_1_77110",
+        "event_ts": "2026-04-17 00:30:38",
+        "session_id": "s_265_9_4681",
+        "user_id": 265,
+        "event_type": "page_view",
+        "product_id": 81,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "product"
+      },
+      {
+        "event_id": "e_265_9_2_58361",
+        "event_ts": "2026-04-17 00:37:11",
+        "session_id": "s_265_9_4681",
+        "user_id": 265,
+        "event_type": "page_view",
+        "product_id": 81,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "home"
+      },
+      {
+        "event_id": "e_265_9_3_89226",
+        "event_ts": "2026-04-17 00:40:45",
+        "session_id": "s_265_9_4681",
+        "user_id": 265,
+        "event_type": "add_to_cart",
+        "product_id": 81,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "product"
+      },
+      {
+        "event_id": "e_265_9_4_86003",
+        "event_ts": "2026-04-17 00:42:33",
+        "session_id": "s_265_9_4681",
+        "user_id": 265,
+        "event_type": "page_view",
+        "product_id": 81,
+        "device_type": "mobile",
+        "traffic_source": "affiliate",
+        "page": "product"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-04-18\\clickstream_2026-04-18.jsonl",
+    "row_count": 389,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_230_1_4_80087",
+        "event_ts": "2026-04-18 00:01:19",
+        "session_id": "s_230_1_2080",
+        "user_id": 230,
+        "event_type": "product_view",
+        "product_id": 83,
+        "device_type": "tablet",
+        "traffic_source": "google",
+        "page": "product"
+      },
+      {
+        "event_id": "e_127_1_5_63290",
+        "event_ts": "2026-04-18 00:03:20",
+        "session_id": "s_127_1_6871",
+        "user_id": 127,
+        "event_type": "remove_from_cart",
+        "product_id": 122,
+        "device_type": "mobile",
+        "traffic_source": "direct",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_230_1_5_24783",
+        "event_ts": "2026-04-18 00:07:52",
+        "session_id": "s_230_1_2080",
+        "user_id": 230,
+        "event_type": "product_view",
+        "product_id": 102,
+        "device_type": "tablet",
+        "traffic_source": "google",
+        "page": "search"
+      },
+      {
+        "event_id": "e_230_1_6_91521",
+        "event_ts": "2026-04-18 00:10:38",
+        "session_id": "s_230_1_2080",
+        "user_id": 230,
+        "event_type": "product_view",
+        "product_id": 121,
+        "device_type": "tablet",
+        "traffic_source": "google",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_230_1_7_73034",
+        "event_ts": "2026-04-18 00:13:12",
+        "session_id": "s_230_1_2080",
+        "user_id": 230,
+        "event_type": "product_view",
+        "product_id": 121,
+        "device_type": "tablet",
+        "traffic_source": "google",
+        "page": "search"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-04-19\\clickstream_2026-04-19.jsonl",
+    "row_count": 618,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_40_3_0_79967",
+        "event_ts": "2026-04-19 00:20:57",
+        "session_id": "s_40_3_8127",
+        "user_id": 40,
+        "event_type": "product_view",
+        "product_id": 140,
+        "device_type": "desktop",
+        "traffic_source": "direct",
+        "page": "product"
+      },
+      {
+        "event_id": "e_40_3_1_43408",
+        "event_ts": "2026-04-19 00:26:52",
+        "session_id": "s_40_3_8127",
+        "user_id": 40,
+        "event_type": "page_view",
+        "product_id": 44,
+        "device_type": "desktop",
+        "traffic_source": "direct",
+        "page": "product"
+      },
+      {
+        "event_id": "e_40_3_2_17489",
+        "event_ts": "2026-04-19 00:29:31",
+        "session_id": "s_40_3_8127",
+        "user_id": 40,
+        "event_type": "product_view",
+        "product_id": 7,
+        "device_type": "desktop",
+        "traffic_source": "direct",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_40_3_3_30160",
+        "event_ts": "2026-04-19 00:34:59",
+        "session_id": "s_40_3_8127",
+        "user_id": 40,
+        "event_type": "product_view",
+        "product_id": 7,
+        "device_type": "desktop",
+        "traffic_source": "direct",
+        "page": "home"
+      },
+      {
+        "event_id": "e_40_3_4_69424",
+        "event_ts": "2026-04-19 00:38:26",
+        "session_id": "s_40_3_8127",
+        "user_id": 40,
+        "event_type": "product_view",
+        "product_id": 7,
+        "device_type": "desktop",
+        "traffic_source": "direct",
+        "page": "product"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-04-20\\clickstream_2026-04-20.jsonl",
+    "row_count": 496,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_2_2_11_72267",
+        "event_ts": "2026-04-20 00:01:16",
+        "session_id": "s_2_2_1178",
+        "user_id": 2,
+        "event_type": "product_view",
+        "product_id": 60,
+        "device_type": "tablet",
+        "traffic_source": "linkedin",
+        "page": "checkout"
+      },
+      {
+        "event_id": "e_6_1_0_91423",
+        "event_ts": "2026-04-20 00:02:05",
+        "session_id": "s_6_1_3556",
+        "user_id": 6,
+        "event_type": "product_view",
+        "product_id": 115,
+        "device_type": "desktop",
+        "traffic_source": "newsletter",
+        "page": "search"
+      },
+      {
+        "event_id": "e_6_1_1_12078",
+        "event_ts": "2026-04-20 00:03:41",
+        "session_id": "s_6_1_3556",
+        "user_id": 6,
+        "event_type": "product_view",
+        "product_id": 115,
+        "device_type": "desktop",
+        "traffic_source": "newsletter",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_76_5_2_23746",
+        "event_ts": "2026-04-20 00:05:41",
+        "session_id": "s_76_5_8101",
+        "user_id": 76,
+        "event_type": "product_view",
+        "product_id": 58,
+        "device_type": "desktop",
+        "traffic_source": "google",
+        "page": "product"
+      },
+      {
+        "event_id": "e_2_2_12_41514",
+        "event_ts": "2026-04-20 00:06:04",
+        "session_id": "s_2_2_1178",
+        "user_id": 2,
+        "event_type": "page_view",
+        "product_id": 128,
+        "device_type": "tablet",
+        "traffic_source": "linkedin",
+        "page": "checkout"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "clickstream_events",
+    "file_path": "data\\raw\\source=web\\entity=clickstream_events\\event_date=2026-04-21\\clickstream_2026-04-21.jsonl",
+    "row_count": 9,
+    "column_count": 9,
+    "columns": [
+      "event_id",
+      "event_ts",
+      "session_id",
+      "user_id",
+      "event_type",
+      "product_id",
+      "device_type",
+      "traffic_source",
+      "page"
+    ],
+    "null_counts": {
+      "event_id": 0,
+      "event_ts": 0,
+      "session_id": 0,
+      "user_id": 0,
+      "event_type": 0,
+      "product_id": 0,
+      "device_type": 0,
+      "traffic_source": 0,
+      "page": 0
+    },
+    "dtypes": {
+      "event_id": "object",
+      "event_ts": "object",
+      "session_id": "object",
+      "user_id": "int64",
+      "event_type": "object",
+      "product_id": "int64",
+      "device_type": "object",
+      "traffic_source": "object",
+      "page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "event_id": "e_110_1_2_99847",
+        "event_ts": "2026-04-21 00:00:14",
+        "session_id": "s_110_1_8121",
+        "user_id": 110,
+        "event_type": "page_view",
+        "product_id": 29,
+        "device_type": "desktop",
+        "traffic_source": "affiliate",
+        "page": "search"
+      },
+      {
+        "event_id": "e_110_1_3_26679",
+        "event_ts": "2026-04-21 00:02:44",
+        "session_id": "s_110_1_8121",
+        "user_id": 110,
+        "event_type": "page_view",
+        "product_id": 29,
+        "device_type": "desktop",
+        "traffic_source": "affiliate",
+        "page": "search"
+      },
+      {
+        "event_id": "e_194_2_2_52910",
+        "event_ts": "2026-04-21 00:05:05",
+        "session_id": "s_194_2_8007",
+        "user_id": 194,
+        "event_type": "page_view",
+        "product_id": 70,
+        "device_type": "desktop",
+        "traffic_source": "affiliate",
+        "page": "product"
+      },
+      {
+        "event_id": "e_110_1_4_53784",
+        "event_ts": "2026-04-21 00:06:03",
+        "session_id": "s_110_1_8121",
+        "user_id": 110,
+        "event_type": "add_to_cart",
+        "product_id": 79,
+        "device_type": "desktop",
+        "traffic_source": "affiliate",
+        "page": "cart"
+      },
+      {
+        "event_id": "e_110_1_5_42733",
+        "event_ts": "2026-04-21 00:08:43",
+        "session_id": "s_110_1_8121",
+        "user_id": 110,
+        "event_type": "add_to_cart",
+        "product_id": 79,
+        "device_type": "desktop",
+        "traffic_source": "affiliate",
+        "page": "home"
+      }
+    ],
+    "file_format": "jsonl"
+  },
+  {
+    "entity": "sessions",
+    "file_path": "data\\raw\\source=web\\entity=sessions\\ingest_date=2026-04-20\\sessions.csv",
+    "row_count": 2974,
+    "column_count": 6,
+    "columns": [
+      "session_id",
+      "user_id",
+      "session_start_ts",
+      "traffic_source",
+      "device_type",
+      "landing_page"
+    ],
+    "null_counts": {
+      "session_id": 0,
+      "user_id": 0,
+      "session_start_ts": 0,
+      "traffic_source": 0,
+      "device_type": 0,
+      "landing_page": 0
+    },
+    "dtypes": {
+      "session_id": "object",
+      "user_id": "int64",
+      "session_start_ts": "object",
+      "traffic_source": "object",
+      "device_type": "object",
+      "landing_page": "object"
+    },
+    "duplicate_row_count": 0,
+    "sample_rows": [
+      {
+        "session_id": "s_215_4_3054",
+        "user_id": 215,
+        "session_start_ts": "2026-03-01 00:09:41",
+        "traffic_source": "linkedin",
+        "device_type": "tablet",
+        "landing_page": "home"
+      },
+      {
+        "session_id": "s_138_7_7596",
+        "user_id": 138,
+        "session_start_ts": "2026-03-01 00:34:27",
+        "traffic_source": "affiliate",
+        "device_type": "Desktop",
+        "landing_page": "search"
+      },
+      {
+        "session_id": "s_159_0_5591",
+        "user_id": 159,
+        "session_start_ts": "2026-03-01 01:00:27",
+        "traffic_source": "linkedin",
+        "device_type": "mobile",
+        "landing_page": "campaign"
+      },
+      {
+        "session_id": "s_181_2_8120",
+        "user_id": 181,
+        "session_start_ts": "2026-03-01 01:52:52",
+        "traffic_source": "google",
+        "device_type": "tablet",
+        "landing_page": "search"
+      },
+      {
+        "session_id": "s_149_6_9806",
+        "user_id": 149,
+        "session_start_ts": "2026-03-01 02:07:55",
+        "traffic_source": "direct",
+        "device_type": "tablet",
+        "landing_page": "product"
+      }
+    ],
+    "file_format": "csv"
+  }
+]

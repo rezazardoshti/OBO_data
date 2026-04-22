@@ -1,0 +1,101 @@
+{
+  "orders": {
+    "description": "ERP order header records",
+    "grain": "1 row = 1 order",
+    "primary_key": [
+      "order_id"
+    ],
+    "format": "csv",
+    "time_column": "order_ts",
+    "join_keys": [
+      "user_id",
+      "session_id"
+    ]
+  },
+  "order_items": {
+    "description": "ERP order line items",
+    "grain": "1 row = 1 order item",
+    "primary_key": [
+      "order_item_id"
+    ],
+    "format": "csv",
+    "time_column": null,
+    "join_keys": [
+      "order_id",
+      "product_id"
+    ]
+  },
+  "products": {
+    "description": "ERP product master data",
+    "grain": "1 row = 1 product",
+    "primary_key": [
+      "product_id"
+    ],
+    "format": "csv",
+    "time_column": null,
+    "join_keys": [
+      "product_id"
+    ]
+  },
+  "inventory_snapshots": {
+    "description": "Inventory snapshots by product and warehouse",
+    "grain": "1 row = 1 product x warehouse x snapshot date",
+    "primary_key": [
+      "snapshot_date",
+      "product_id",
+      "warehouse_id"
+    ],
+    "format": "csv",
+    "time_column": "snapshot_date",
+    "join_keys": [
+      "product_id"
+    ]
+  },
+  "users": {
+    "description": "CRM user master data",
+    "grain": "1 row = 1 user",
+    "primary_key": [
+      "user_id"
+    ],
+    "format": "csv",
+    "time_column": "signup_ts",
+    "join_keys": [
+      "user_id"
+    ]
+  },
+  "sessions": {
+    "description": "Web session starts and attributes",
+    "grain": "1 row = 1 session",
+    "primary_key": [
+      "session_id"
+    ],
+    "format": "csv",
+    "time_column": "session_start_ts",
+    "join_keys": [
+      "session_id",
+      "user_id"
+    ]
+  },
+  "clickstream_events": {
+    "description": "Raw clickstream events",
+    "grain": "1 row = 1 event",
+    "primary_key": [
+      "event_id"
+    ],
+    "format": "jsonl",
+    "time_column": "event_ts",
+    "join_keys": [
+      "session_id",
+      "user_id",
+      "product_id"
+    ]
+  },
+  "application_logs": {
+    "description": "Unstructured application logs",
+    "grain": "1 row = 1 log line",
+    "primary_key": [],
+    "format": "log",
+    "time_column": "embedded in message",
+    "join_keys": []
+  }
+}

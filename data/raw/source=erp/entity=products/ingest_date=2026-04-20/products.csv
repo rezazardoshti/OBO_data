@@ -1,0 +1,145 @@
+product_id,sku,product_name,category,brand,base_price,active
+1,SKU-00001,ByteCore Business 14,Laptop,SkyLoop,2300.0,True
+2,SKU-00002,Auralink Creator 16,Laptop,SkyLoop,2266.0,True
+3,SKU-00003,NovaTech Business 14,Laptop,ByteCore,2198.0,True
+4,SKU-00004,SkyLoop Creator 16,Laptop,PeakWare,1103.0,True
+5,SKU-00005,SkyLoop Ultrabook 13,Laptop,PeakWare ,2440.0,False
+6,SKU-00006,,Laptop,Fluxion,1612.0,True
+7,SKU-00007,Fluxion Ultrabook 13,Laptop,Auralink,1468.0,True
+8,SKU-00008,SkyLoop Ultrabook 13,Laptop,Auralink,983.0,True
+9,SKU-00009,NovaTech Ultrabook 13,Laptop,SkyLoop,2557.0,True
+10,SKU-00010,Fluxion Gaming 15,Laptop,SkyLoop,2589.0,True
+11,SKU-00011,Fluxion Ultrabook 13,Laptop,SkyLoop,919.0,True
+12,SKU-00012,NovaTech Gaming 15,Laptop,SkyLoop,972.0,True
+13,SKU-00013,ByteCore Ultrabook 13,Laptop,Auralink,1493.0,True
+14,SKU-00014,Fluxion Business 14,Laptop,NovaTech,1030.0,True
+15,SKU-00015,Fluxion Gaming 15,Laptop,SkyLoop,1144.0,True
+16,SKU-00016,ByteCore Ultrabook 13,Laptop,Auralink,1571.0,True
+17,SKU-00017,PeakWare Business 14,Laptop,Auralink,2046.0,True
+18,SKU-00018,NovaTech Gaming 15,Laptop,PeakWare,2164.0,True
+19,SKU-00019,PeakWare Gaming 15,Laptop,SkyLoop,2060.0,True
+20,SKU-00020,NovaTech Business 14,Laptop,ByteCore,1502.0,True
+21,SKU-00021,PeakWare Creator 16,Laptop,SkyLoop,1720.0,True
+22,SKU-00022,Fluxion Gaming 15,Laptop,Auralink,938.0,True
+23,SKU-00023,NovaTech Gaming 15,Laptop,SkyLoop,1963.0,True
+24,SKU-00024,ByteCore Gaming 15,Laptop,NovaTech,1640.0,True
+25,SKU-00025,ByteCore Phone Pro,Phone,NovaTech,1016.0,True
+26,SKU-00026,Auralink Phone Lite,Phone,Auralink,1313.0,True
+27,SKU-00027,PeakWare Phone Mini,Phone,PeakWare,785.0,True
+28,SKU-00028,PeakWare Phone Pro,Phone,Auralink,943.0,False
+29,SKU-00029,NovaTech Phone Max,Phone,Fluxion,1247.0,True
+30,SKU-00030,NovaTech Phone Max,Phone,Auralink,433.0,True
+31,SKU-00031,ByteCore Phone Max,Phone,ByteCore,602.0,True
+32,SKU-00032,NovaTech Phone Lite,Phone,Auralink,364.0,False
+33,SKU-00033,ByteCore Phone Max,Phone,PeakWare,465.0,True
+34,SKU-00034,Auralink Phone Mini,Phone,SkyLoop,1153.0,True
+35,SKU-00035,ByteCore Phone Lite,Phone,ByteCore,409.0,True
+36,SKU-00036,NovaTech Phone Mini,Phone,NovaTech,1176.0,True
+37,SKU-00037,Auralink Phone Pro,Phone,Auralink,366.0,True
+38,SKU-00038,SkyLoop Phone Pro,Phone,Auralink,1093.0,True
+39,SKU-00039,Auralink Phone Max,Phone,ByteCore,1255.0,True
+40,SKU-00040,ByteCore Phone Lite,Phone,Fluxion,1396.0,True
+41,SKU-00041,Auralink Phone Mini,Phone,Auralink,737.0,True
+42,SKU-00042,NovaTech Phone Max,Phone,ByteCore,1155.0,True
+43,SKU-00043,NovaTech Phone Max,Phone,ByteCore,1141.0,True
+44,SKU-00044,ByteCore Phone Pro,Phone,PeakWare,609.0,True
+45,SKU-00045,PeakWare Phone Mini,Phone,Auralink,671.0,True
+46,SKU-00046,NovaTech Phone Lite,Phone,Fluxion,363.0,True
+47,SKU-00047,SkyLoop Phone Lite,Phone,NovaTech,1226.0,True
+48,SKU-00048,Auralink Phone Lite,Phone,ByteCore,1427.0,True
+49,SKU-00049,PeakWare Earbuds,Audio,NovaTech,448.0,True
+50,SKU-00050,NovaTech Studio Mic,Audio,NovaTech,292.0,True
+51,SKU-00051,NovaTech ANC Headphones,Audio,NovaTech,115.0,True
+52,SKU-00052,NovaTech Earbuds,Audio,NovaTech,39.0,True
+53,SKU-00053,SkyLoop Earbuds,Audio,Auralink,53.0,True
+54,SKU-00054,PeakWare Studio Mic,Audio,NovaTech,237.0,True
+55,SKU-00055,ByteCore ANC Headphones,Audio,Fluxion,114.0,True
+56,SKU-00056,PeakWare Earbuds,Audio,SkyLoop,203.0,True
+57,SKU-00057,SkyLoop Studio Mic,Audio,SkyLoop,294.0,True
+58,SKU-00058,Fluxion Earbuds,Audio,Auralink,125.0,True
+59,SKU-00059,Fluxion Earbuds,Audio,ByteCore,233.0,True
+60,SKU-00060,NovaTech Earbuds,Audio,Fluxion,351.0,True
+61,SKU-00061,NovaTech Earbuds,Audio,SkyLoop,177.0,True
+62,SKU-00062,NovaTech Earbuds,Audio,PeakWare,268.0,True
+63,SKU-00063,NovaTech ANC Headphones,Audio,Auralink,177.0,True
+64,SKU-00064,PeakWare Studio Mic,Audio,SkyLoop,133.0,True
+65,SKU-00065,Auralink Bluetooth Speaker,Audio,SkyLoop,154.0,True
+66,SKU-00066,SkyLoop Bluetooth Speaker,Audio,NovaTech,152.0,True
+67,SKU-00067,Auralink ANC Headphones,Audio,Auralink,111.0,True
+68,SKU-00068,SkyLoop Earbuds,Audio,PeakWare,211.0,True
+69,SKU-00069,Fluxion ANC Headphones,Audio,SkyLoop,101.0,True
+70,SKU-00070,Auralink Earbuds,Audio,Fluxion,431.0,True
+71,SKU-00071,NovaTech Bluetooth Speaker,Audio,PeakWare,233.0,True
+72,SKU-00072,Auralink Earbuds,Audio,SkyLoop,177.0,True
+73,SKU-00073,PeakWare Laptop Sleeve,Accessories,Fluxion,205.0,True
+74,SKU-00074,ByteCore USB-C Hub,Accessories,ByteCore,163.0,True
+75,SKU-00075,Auralink USB-C Hub,Accessories,PeakWare,124.0,True
+76,SKU-00076,PeakWare Laptop Sleeve,Accessories,Auralink,126.0,True
+77,SKU-00077,Fluxion Laptop Sleeve,Accessories,SkyLoop,167.0,True
+78,SKU-00078,Fluxion Keyboard,Accessories,PeakWare,110.0,True
+79,SKU-00079,PeakWare Mouse,Accessories,ByteCore,127.0,True
+80,SKU-00080,NovaTech Mouse,Accessories,Auralink,94.0,True
+81,SKU-00081,Auralink USB-C Hub,Accessories,PeakWare,89.0,True
+82,SKU-00082,ByteCore Laptop Sleeve,Accessories,ByteCore,42.0,True
+83,SKU-00083,Fluxion Keyboard,Accessories,Fluxion,15.0,True
+84,SKU-00084,NovaTech USB-C Hub,Accessories,SkyLoop,186.0,True
+85,SKU-00085,PeakWare USB-C Hub,Accessories,Fluxion,120.0,True
+86,SKU-00086,PeakWare Keyboard,Accessories,NovaTech,148.0,True
+87,SKU-00087,SkyLoop Keyboard,Accessories,Fluxion,51.0,True
+88,SKU-00088,NovaTech USB-C Hub,Accessories,Fluxion,104.0,True
+89,SKU-00089,NovaTech Keyboard,Accessories,ByteCore,26.0,True
+90,SKU-00090,ByteCore Mouse,Accessories,NovaTech,95.0,True
+91,SKU-00091,SkyLoop USB-C Hub,Accessories,SkyLoop,77.0,True
+92,SKU-00092,ByteCore Laptop Sleeve,Accessories,Auralink,217.0,True
+93,SKU-00093,Auralink Laptop Sleeve,Accessories,ByteCore,158.0,True
+94,SKU-00094,SkyLoop USB-C Hub,Accessories,SkyLoop,104.0,True
+95,SKU-00095,SkyLoop USB-C Hub,Accessories,Auralink,86.0,True
+96,SKU-00096,ByteCore Mouse,Accessories,NovaTech,216.0,True
+97,SKU-00097,ByteCore 27in 4K,Monitor,Auralink,921.0,True
+98,SKU-00098,ByteCore 34in Ultrawide,Monitor,SkyLoop,418.0,True
+99,SKU-00099,PeakWare 27in Gaming,Monitor,PeakWare,1194.0,True
+100,SKU-00100,NovaTech 24in IPS,Monitor,PeakWare,447.0,False
+101,SKU-00101,Fluxion 24in IPS,Monitor,Fluxion,373.0,True
+102,SKU-00102,Auralink 34in Ultrawide,Monitor,ByteCore,740.0,True
+103,SKU-00103,SkyLoop 34in Ultrawide,Monitor,Auralink,420.0,True
+104,SKU-00104,NovaTech 34in Ultrawide,Monitor,Fluxion,1097.0,True
+105,SKU-00105,SkyLoop 34in Ultrawide,Monitor,Fluxion,704.0,True
+106,SKU-00106,ByteCore 24in IPS,Monitor,SkyLoop,555.0,True
+107,SKU-00107,SkyLoop 24in IPS,Monitor,PeakWare,1169.0,True
+108,SKU-00108,SkyLoop 34in Ultrawide,Monitor,NovaTech,246.0,True
+109,SKU-00109,NovaTech 34in Ultrawide,Monitor,ByteCore,956.0,True
+110,SKU-00110,ByteCore 34in Ultrawide,Monitor,PeakWare,846.0,True
+111,SKU-00111,Fluxion 27in Gaming,Monitor,PeakWare,1198.0,True
+112,SKU-00112,ByteCore 27in Gaming,Monitor,ByteCore,1269.0,True
+113,SKU-00113,Fluxion 27in 4K,Monitor,PeakWare,882.0,True
+114,SKU-00114,ByteCore 34in Ultrawide,Monitor,ByteCore,637.0,True
+115,SKU-00115,PeakWare 27in Gaming,Monitor,ByteCore,440.0,True
+116,SKU-00116,Auralink 24in IPS,Monitor,PeakWare,467.0,True
+117,SKU-00117,SkyLoop 27in 4K,Monitor,NovaTech,572.0,True
+118,SKU-00118,Auralink 34in Ultrawide,Monitor,ByteCore,480.0,True
+119,SKU-00119,PeakWare 34in Ultrawide,Monitor,Auralink,172.0,True
+120,SKU-00120,SkyLoop 24in IPS,Monitor,Fluxion,1151.0,True
+121,SKU-00121,PeakWare MicroSD 256GB,Storage,NovaTech,354.0,True
+122,SKU-00122,ByteCore SSD 1TB,Storage,NovaTech,346.0,True
+123,SKU-00123,Fluxion External HDD,Storage,NovaTech,183.0,True
+124,SKU-00124,ByteCore MicroSD 256GB,Storage,Auralink,483.0,True
+125,SKU-00125,ByteCore NAS Drive,Storage,SkyLoop,92.0,True
+126,SKU-00126,ByteCore External HDD,Storage,SkyLoop,117.0,True
+127,SKU-00127,Auralink SSD 1TB,Storage,NovaTech,358.0,True
+128,SKU-00128,Fluxion NAS Drive,Storage,Auralink,482.0,True
+129,SKU-00129,SkyLoop MicroSD 256GB,Storage,NovaTech,260.0,True
+130,SKU-00130,Auralink NAS Drive,Storage,SkyLoop,435.0,True
+131,SKU-00131,Fluxion MicroSD 256GB,Storage,PeakWare,266.0,True
+132,SKU-00132,ByteCore MicroSD 256GB,Storage,Auralink,373.0,True
+133,SKU-00133,Fluxion MicroSD 256GB,Storage,PeakWare,222.0,True
+134,SKU-00134,ByteCore External HDD,Storage,ByteCore,116.0,True
+135,SKU-00135,Auralink NAS Drive,Storage,ByteCore,396.0,True
+136,SKU-00136,PeakWare SSD 1TB,Storage,SkyLoop,279.0,True
+137,SKU-00137,NovaTech SSD 1TB,Storage,SkyLoop,416.0,True
+138,SKU-00138,Auralink SSD 1TB,Storage,SkyLoop,379.0,True
+139,SKU-00139,ByteCore NAS Drive,Storage,Auralink,308.0,True
+140,SKU-00140,Fluxion MicroSD 256GB,Storage,ByteCore,442.0,True
+141,SKU-00141,ByteCore MicroSD 256GB,Storage,PeakWare,71.0,True
+142,SKU-00142,Auralink SSD 1TB,Storage,NovaTech,30.0,True
+143,SKU-00143,PeakWare NAS Drive,Storage,NovaTech,114.0,True
+144,SKU-00144,Auralink NAS Drive,Storage,ByteCore,247.0,False
