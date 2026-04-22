@@ -1,0 +1,30 @@
+{
+  "written_files": {
+    "hub_customer": "data\\vault\\hub_customer\\load_date=2026-04-22\\hub_customer.parquet",
+    "hub_order": "data\\vault\\hub_order\\load_date=2026-04-22\\hub_order.parquet",
+    "hub_product": "data\\vault\\hub_product\\load_date=2026-04-22\\hub_product.parquet",
+    "hub_session": "data\\vault\\hub_session\\load_date=2026-04-22\\hub_session.parquet",
+    "link_order_customer": "data\\vault\\link_order_customer\\load_date=2026-04-22\\link_order_customer.parquet",
+    "link_order_session": "data\\vault\\link_order_session\\load_date=2026-04-22\\link_order_session.parquet",
+    "link_order_product": "data\\vault\\link_order_product\\load_date=2026-04-22\\link_order_product.parquet",
+    "link_session_customer": "data\\vault\\link_session_customer\\load_date=2026-04-22\\link_session_customer.parquet",
+    "sat_customer_attributes": "data\\vault\\sat_customer_attributes\\load_date=2026-04-22\\sat_customer_attributes.parquet",
+    "sat_order_details": "data\\vault\\sat_order_details\\load_date=2026-04-22\\sat_order_details.parquet",
+    "sat_product_attributes": "data\\vault\\sat_product_attributes\\load_date=2026-04-22\\sat_product_attributes.parquet",
+    "sat_session_attributes": "data\\vault\\sat_session_attributes\\load_date=2026-04-22\\sat_session_attributes.parquet"
+  },
+  "dataset_counts": {
+    "hub_customer": 300,
+    "hub_order": 705,
+    "hub_product": 144,
+    "hub_session": 2974,
+    "link_order_customer": 705,
+    "link_order_session": 705,
+    "link_order_product": 1223,
+    "link_session_customer": 2974,
+    "sat_customer_attributes": 300,
+    "sat_order_details": 705,
+    "sat_product_attributes": 144,
+    "sat_session_attributes": 2974
+  }
+}

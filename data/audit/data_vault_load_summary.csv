@@ -1,0 +1,13 @@
+dataset_name,row_count,column_count,output_file
+hub_customer,300,4,data\vault\hub_customer\load_date=2026-04-22\hub_customer.parquet
+hub_order,705,4,data\vault\hub_order\load_date=2026-04-22\hub_order.parquet
+hub_product,144,4,data\vault\hub_product\load_date=2026-04-22\hub_product.parquet
+hub_session,2974,4,data\vault\hub_session\load_date=2026-04-22\hub_session.parquet
+link_order_customer,705,5,data\vault\link_order_customer\load_date=2026-04-22\link_order_customer.parquet
+link_order_session,705,5,data\vault\link_order_session\load_date=2026-04-22\link_order_session.parquet
+link_order_product,1223,5,data\vault\link_order_product\load_date=2026-04-22\link_order_product.parquet
+link_session_customer,2974,5,data\vault\link_session_customer\load_date=2026-04-22\link_session_customer.parquet
+sat_customer_attributes,300,10,data\vault\sat_customer_attributes\load_date=2026-04-22\sat_customer_attributes.parquet
+sat_order_details,705,7,data\vault\sat_order_details\load_date=2026-04-22\sat_order_details.parquet
+sat_product_attributes,144,7,data\vault\sat_product_attributes\load_date=2026-04-22\sat_product_attributes.parquet
+sat_session_attributes,2974,7,data\vault\sat_session_attributes\load_date=2026-04-22\sat_session_attributes.parquet
